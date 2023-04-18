@@ -5,12 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Delícias da Carne</title>
+    <link rel="stylesheet" href="estilo/mobile.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
 </head>
 <body>
     <header class="cabecalho">
-        <h1 id="titulo-site">
-            Delícias da Carne
-        </h1>
+        <img id="titulo-site" src="imagens/logo.png">
+        <span class="material-symbols-outlined" class="menu-hamburguer">
+            menu
+        </span>
         <nav class="menu">
             <a href="#" class="menuitem">Inicio</a>
             <a href="#" class="menuitem">Sobre</a>
@@ -57,9 +61,38 @@
                 <img src="imagens/picanha.webp" alt="Imagem de uma carne exótica">
             </div>
         </section>
-        <section class="quem-somos"></section>
-        <section class="contatos"></section>
-        <section class="localizacao"></section>
+        <section class="quem-somos">
+            <h2 class="titulo-quem-somos">Quem somos</h2>
+            <p class="paragrafo-quem-somos">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat fugiat explicabo dolorem accusantium nemo quas a perspiciatis temporibus nihil ex voluptatum suscipit iusto optio natus doloribus non accusamus, exercitationem libero.
+            </p>
+            <button>Saiba mais</button>
+        </section>
+
+        <section class="reserva">
+            <h2 class="titulo-reserva">
+                Faça sua reserva conosco
+            </h2>
+        </section>
+
+        <section class="contatos">
+            <ul class="contatos-endereco">
+                    <li>Av</li>
+                    <li>Telefone</li>
+                    <li>Email</li>
+            </ul>
+
+            <ul class="horarios-funcionamento">
+                <li>Segunda a Quinta</li>
+                <li>Sexta</li>
+                <li>Sábado</li>
+                <li>Domingo</li>
+            </ul>
+        </section>
+        <section class="localizacao">
+            <h2 class="titulo-localizazao">Conheça nosso espaço</h2>
+            <div class="iframe">localização</div>
+        </section>
     </main>
     <footer class="rodape">Desenvovido</footer>
 </body>
