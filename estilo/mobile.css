@@ -13,7 +13,7 @@ font-family: 'Lato', sans-serif; */
     --cor4: #100300;
 
     --fonte-titulos: 'Allerta', sans-serif;
-    --fonte-destaque: 'Lato', sans-serif;
+    --fonte-paragrafo: 'Lato', sans-serif;
 }
 
 *{
@@ -29,14 +29,18 @@ font-family: 'Lato', sans-serif; */
     justify-content: space-between;
     align-items: center;
 
-    background-color: var(--cor4);
+    overflow: hidden;
+    position: fixed;
+    width: 100vw;
+
+    background-color: #100300ef;
     color: var(--cor3);
     padding: 16px 14px 8px 14px;
     margin-bottom: 64px;
 }
 .cabecalho img{
     width: 150px;
-    margin: 16px auto ;
+    margin: 0px auto 16px auto;
 }
 .menu{
     display: none;
@@ -44,6 +48,7 @@ font-family: 'Lato', sans-serif; */
     justify-content: center;
     text-align: center;
     width: 100vw;
+    font-family: var(--fonte-paragrafo);
 }
 .menu a{
     padding: 8px;
@@ -53,4 +58,32 @@ font-family: 'Lato', sans-serif; */
 }
 .menu a:hover{
     text-decoration: underline;
+}
+.principal{
+    background: black url('../imagens/foto-principal3.jpg') center center no-repeat;
+    background-size: cover;
+    height: 650px;
+    border: 1px solid black;
+}
+.texto-principal{
+    margin-top: 300px;
+    color: var(--cor3);
+    font-family: var(--fonte-titulos);
+    width: 80vw;
+    margin: 300px auto 0;
+    font-size: 20px;
+}
+.pedir-agora{
+    margin-top: 24px;
+    width: 100px;
+    height: 40px;
+    font-size: 16px;
+    color: var(--cor3);
+    border: 3px solid var(--cor3);
+    background-color: transparent;
+    border-radius: 8px;
+}
+.pedir-agora:hover{
+    background-color: var(--cor3);
+    color: var(--cor0);
 }
