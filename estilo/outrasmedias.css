@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+@media screen and (min-width: 768px) and (max-width: 992px){
+    #menu-hamburguer{
+        display: none;
+    }
+    .menu{
+        display: flex;
+        flex-direction: row;
+    }
+    .menu a:hover{
+        font-size: 20px;
+        text-decoration: none;
+    }
+}
+@media screen and (min-width: 992px){
+    .cabecalho{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    #menu-hamburguer{
+        display: none;
+    }
+    .menu{
+        display: flex;
+        flex-direction: row;
+        width: 400px;
+    }
+    .menu a:hover{
+        font-size: 20px;
+        text-decoration: none;
+    }
+    .principal{
+        height: 900px;
+        border: 1px solid black;
+        margin-bottom: 64px;
+    }
+    .texto-principal{
+        width: 60vw;
+        margin: 400px auto 0;
+        font-size: 32px;
+    }
+    .pedir-agora{
+        width: 120px;
+        font-size: 20px;
+    }
+}
