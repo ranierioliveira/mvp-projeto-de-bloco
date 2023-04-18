@@ -64,6 +64,7 @@ font-family: 'Lato', sans-serif; */
     background-size: cover;
     height: 650px;
     border: 1px solid black;
+    margin-bottom: 64px;
 }
 .texto-principal{
     margin-top: 300px;
