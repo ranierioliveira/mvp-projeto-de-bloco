@@ -23,9 +23,6 @@ font-family: 'Lato', sans-serif; */
     text-decoration: none;
 }
 
-body{
-    background-color: var(--cor3);
-}
 .cabecalho{
     display: flex;
     flex-direction: column;
@@ -89,15 +86,20 @@ body{
     background-color: var(--cor2);
     color: var(--cor0);
 }
-.quem-somos{
+.centralizadora{
     display: flex;
     flex-direction: column;
     align-items: center;
-    
-    padding: 64px 0px;
+}
+.quem-somos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 0px;
     height: 650px;
     font-size: 20px;
-    border: 1px solid black;
+    background-color: var(--cor3);
+    margin-bottom: 16px;
 }
 .quem-somos-texto{
     display: flex;
@@ -106,7 +108,8 @@ body{
     gap: 24px;
 
     width: 80vw;
-    margin: 0px auto;
+    /* 0 auto */
+    margin: 0px 0px; 
     color: var(--cor1);
     margin-bottom: 24px;
 }
@@ -120,13 +123,19 @@ body{
 .saiba-mais{
     font-family: var(--fonte-paragrafo);
     background-color: var(--cor3);
-    width: 100px;
+    width: 150px;
     height: 30px;
     font-size: 18px;
+    color: var(--cor1);
+    border: 2px solid var(--cor1);
 }
 .saiba-mais:hover{
     box-shadow: 1px 1px 1px var(--cor4);
 }
 .quem-somos img{
     width: 250px;
+}
+.algumas-opcoes{
+    background-color: var(--cor4);
+    height: 650px;
 }
