@@ -23,6 +23,9 @@ font-family: 'Lato', sans-serif; */
     text-decoration: none;
 }
 
+body{
+    background-color: var(--cor3);
+}
 .cabecalho{
     display: flex;
     flex-direction: column;
@@ -39,7 +42,7 @@ font-family: 'Lato', sans-serif; */
     margin-bottom: 64px;
 }
 .cabecalho img{
-    width: 150px;
+    width: 120px;
     margin: 0px auto 16px auto;
 }
 .menu{
@@ -64,7 +67,6 @@ font-family: 'Lato', sans-serif; */
     background-size: cover;
     height: 650px;
     border: 1px solid black;
-    margin-bottom: 64px;
 }
 .texto-principal{
     color: var(--cor2);
@@ -86,4 +88,45 @@ font-family: 'Lato', sans-serif; */
 .pedir-agora:hover{
     background-color: var(--cor2);
     color: var(--cor0);
+}
+.quem-somos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    padding: 64px 0px;
+    height: 650px;
+    font-size: 20px;
+    border: 1px solid black;
+}
+.quem-somos-texto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+
+    width: 80vw;
+    margin: 0px auto;
+    color: var(--cor1);
+    margin-bottom: 24px;
+}
+.titulo-quem-somos{
+    font-family: var(--fonte-titulos);
+}
+.paragrafo-quem-somos{
+    font-family: var(--fonte-paragrafo);
+    text-indent: 8px;
+}
+.saiba-mais{
+    font-family: var(--fonte-paragrafo);
+    background-color: var(--cor3);
+    width: 100px;
+    height: 30px;
+    font-size: 18px;
+}
+.saiba-mais:hover{
+    box-shadow: 1px 1px 1px var(--cor4);
+}
+.quem-somos img{
+    width: 250px;
 }
