@@ -139,19 +139,78 @@ font-family: 'Lato', sans-serif; */
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-around;
     padding-top: 24px;
     
     background-color: var(--cor4);
     height: 650px;
     color: var(--cor3);
-    font-size: 20px;
-
-    
+    font-size: 20px; 
 }
 .algumas-opcoes-titulo{
     font-family: var(--fonte-titulos);
 }
 .algumas-opcoes-paragrafo{
     font-family: var(--fonte-paragrafo);
-    
+}
+.container-slides{
+    width: 400px;
+    height: 250px;
+    overflow: hidden;
+    margin: 0 auto;
+    border: 1px solid var(--cor3);
+}
+.slides{
+    display: flex;
+    width: 500%;
+    height: 250px;
+}
+.slides input{
+    display: none;
+}
+.slide{
+    /* Tamanho das tags que contém as imagens em relação a tag slides */
+    width: 20%;
+    position: relative;
+    transition: 2s;
+}
+.slide img{
+    width: 400px;
+}
+.manual-navigation{
+    position: absolute;
+    margin-top: -40px;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+}
+.manual-btn{
+    border: 2px solid var(--cor3);
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .5s;
+}
+.manual-btn:not(:last-child){
+    margin-right: 8px;
+}
+.manual-btn:hover{
+    background-color: var(--cor3);
+}
+
+/* Quando o primeiro radio (radio1) estiver ativo a primeira imagem (first) vai ter zero de margem */
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+#radio2:checked ~ .first{
+    margin-left: -20%;
+}
+#radio3:checked ~ .first{
+    margin-left: -40%;
+}
+#radio4:checked ~ .first{
+    margin-left: -60%;
+}
+#radio5:checked ~ .first{
+    margin-left: -80%;
 }
