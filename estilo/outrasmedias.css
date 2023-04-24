@@ -41,6 +41,9 @@
         font-size: 20px;
         margin-bottom: 32px;
     }
+    .algumas-opcoes{
+        height: 500px;
+    }
     .algumas-opcoes-titulo{
         font-size: 32px;
     }
@@ -124,5 +127,28 @@
         font-size: 24px;
         width: 250px;
         height: 60px;
+    }
+    .algumas-opcoes{
+        height: 650px;
+    }
+    .algumas-opcoes-titulo{
+        font-size: 48px;
+    }
+    .container-slides{
+        width: 800px;
+        height: 500px;
+    }
+    .slides{
+        height: 500px;
+    }
+    .slide img{
+        width: 800px;
+    }
+    .manual-navigation{
+        width: 800px;
+    }
+    .navigation-auto{
+        width: 800px;
+        margin-top: 460px;
     }
 }

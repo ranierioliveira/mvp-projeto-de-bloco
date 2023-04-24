@@ -147,7 +147,7 @@ font-family: 'Lato', sans-serif; */
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 650px;
+    height: 450px;
 }
 .algumas-opcoes-titulo{
     font-family: var(--fonte-titulos);
@@ -159,7 +159,7 @@ font-family: 'Lato', sans-serif; */
     height: 250px;
     overflow: hidden;
     margin: 0 auto;
-    border: 1px solid var(--cor3);
+    
 }
 .slides{
     display: flex;
@@ -251,4 +251,11 @@ font-family: 'Lato', sans-serif; */
 }
 #radio5:checked ~ .navigation-auto .auto-btn5{
     background-color: var(--cor3);
+}
+
+.reserva{
+    height: 600px;
+    background: var(--cor4) url('../imagens/fundo-reserva2.jpg') center center no-repeat;
+    background-size: cover;
+    filter: grayscale(.5);
 }
