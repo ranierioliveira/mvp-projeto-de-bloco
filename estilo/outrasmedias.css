@@ -30,7 +30,7 @@
         gap: 32px;
     }
     .quem-somos h2{
-        font-size: 48px;
+        font-size: 32px;
     }
     .quem-somos img{
         width: 450px;
@@ -40,6 +40,26 @@
         height: 40px;
         font-size: 20px;
         margin-bottom: 32px;
+    }
+    .algumas-opcoes-titulo{
+        font-size: 32px;
+    }
+    .container-slides{
+        width: 450px;
+        height: 300px;
+    }
+    .slides{
+        height: 300px;
+    }
+    .slide img{
+        width: 450px;
+    }
+    .manual-navigation{
+        width: 450px;
+    }
+    .navigation-auto{
+        width: 450px;
+        margin-top: 260px;
     }
 }
 @media screen and (min-width: 992px){
@@ -106,8 +126,3 @@
         height: 60px;
     }
 }
-/*.quem-somos{
-        justify-content: space-evenly;
-        height: 900px;
-        font-size: 20px;
-    }*/

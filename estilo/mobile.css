@@ -148,8 +148,6 @@ font-family: 'Lato', sans-serif; */
     align-items: center;
     justify-content: center;
     height: 650px;
-    
-    
 }
 .algumas-opcoes-titulo{
     font-family: var(--fonte-titulos);
