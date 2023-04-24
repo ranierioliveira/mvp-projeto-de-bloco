@@ -135,26 +135,29 @@ font-family: 'Lato', sans-serif; */
 .quem-somos img{
     width: 250px;
 }
+.algumas-opcoes-secao{
+    background-color: var(--cor4);
+    
+    color: var(--cor3);
+    font-size: 20px; 
+    padding-top: 64px;
+}
 .algumas-opcoes{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-    padding-top: 24px;
-    
-    background-color: var(--cor4);
+    justify-content: center;
     height: 650px;
-    color: var(--cor3);
-    font-size: 20px; 
+    
+    
 }
 .algumas-opcoes-titulo{
     font-family: var(--fonte-titulos);
+    text-align: center;
 }
-.algumas-opcoes-paragrafo{
-    font-family: var(--fonte-paragrafo);
-}
+
 .container-slides{
-    width: 400px;
+    width: 380px;
     height: 250px;
     overflow: hidden;
     margin: 0 auto;
@@ -175,12 +178,12 @@ font-family: 'Lato', sans-serif; */
     transition: 2s;
 }
 .slide img{
-    width: 400px;
+    width: 380px;
 }
 .manual-navigation{
     position: absolute;
     margin-top: -40px;
-    width: 400px;
+    width: 380px;
     display: flex;
     justify-content: center;
 }
@@ -213,4 +216,41 @@ font-family: 'Lato', sans-serif; */
 }
 #radio5:checked ~ .first{
     margin-left: -80%;
+}
+
+/*Vão ficar marcadas quando clicadas*/
+.navigation-auto div{
+    border: 2px solid blue;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .5s;
+}
+.navigation-auto{
+    display: flex;
+    justify-content: center;
+    
+    position: absolute;
+    width: 380px;
+    margin-top: 210px;
+}
+.navigation-auto div:not(:last-child){
+    margin-right: 8px;
+}
+
+/* Vai ficar marcado quando selecionado */
+#radio1:checked ~ .navigation-auto .auto-btn1{
+    background-color: var(--cor3);
+}
+#radio2:checked ~ .navigation-auto .auto-btn2{
+    background-color: var(--cor3);
+}
+#radio3:checked ~ .navigation-auto .auto-btn3{
+    background-color: var(--cor3);
+}
+#radio4:checked ~ .navigation-auto .auto-btn4{
+    background-color: var(--cor3);
+}
+#radio5:checked ~ .navigation-auto .auto-btn5{
+    background-color: var(--cor3);
 }
