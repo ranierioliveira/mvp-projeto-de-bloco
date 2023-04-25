@@ -254,8 +254,39 @@ font-family: 'Lato', sans-serif; */
 }
 
 .reserva{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
     height: 600px;
-    background: var(--cor4) url('../imagens/fundo-reserva2.jpg') center center no-repeat;
-    background-size: cover;
-    filter: grayscale(.5);
+    background-color: whitesmoke;
+    font-family: var(--fonte-paragrafo);
+
+}
+.reserva p{
+    font-size: 20px;
+}
+.reserva label{
+    font-size: 16px;
+}
+.reserva input{
+    width: 80vw;
+    height: 30px;
+    margin-bottom: 24px;
+}
+.reserva textarea{
+    width: 80vw;
+    margin-bottom: 24px;
+}
+.titulo-reserva{
+    font-family: var(--fonte-titulos);
+    color: var(--cor0);
+    margin-bottom: 24px;
+}
+.fundo-formulario{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 550px;
 }
