@@ -151,4 +151,10 @@
         width: 800px;
         margin-top: 460px;
     }
+    .formulario{
+        width: 1200px;
+    }
+    input{
+        font-size: 16px;
+    }
 }
