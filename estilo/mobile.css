@@ -54,7 +54,6 @@ font-family: 'Lato', sans-serif; */
     padding: 8px;
     border-bottom: 1px solid var(--cor3);
     color: var(--cor3);
-    
 }
 .menu a:hover{
     text-decoration: underline;
@@ -177,6 +176,7 @@ font-family: 'Lato', sans-serif; */
 }
 .slide img{
     width: 380px;
+    height: 100%;
 }
 .manual-navigation{
     position: absolute;
@@ -186,7 +186,7 @@ font-family: 'Lato', sans-serif; */
     justify-content: center;
 }
 .manual-btn{
-    border: 2px solid var(--cor3);
+    border: 2px solid var(--cor4);
     padding: 5px;
     border-radius: 10px;
     cursor: pointer;
@@ -241,16 +241,16 @@ font-family: 'Lato', sans-serif; */
     background-color: var(--cor3);
 }
 #radio2:checked ~ .navigation-auto .auto-btn2{
-    background-color: var(--cor3);
+    background-color: var(--cor4);
 }
 #radio3:checked ~ .navigation-auto .auto-btn3{
-    background-color: var(--cor3);
+    background-color: var(--cor4);
 }
 #radio4:checked ~ .navigation-auto .auto-btn4{
-    background-color: var(--cor3);
+    background-color: var(--cor4);
 }
 #radio5:checked ~ .navigation-auto .auto-btn5{
-    background-color: var(--cor3);
+    background-color: var(--cor4);
 }
 
 .reserva{
@@ -360,6 +360,9 @@ font-family: 'Lato', sans-serif; */
     align-items: center;
     justify-content: space-around;
     height: 80%;
+}
+.imagem-contato{
+    display: none;
 }
 .imagem-contato img{
     width: 100px;

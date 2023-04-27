@@ -12,7 +12,6 @@
         flex-direction: row;
     }
     .menu a:hover{
-        font-size: 20px;
         text-decoration: none;
     }
     .principal{
@@ -64,6 +63,9 @@
         width: 450px;
         margin-top: 260px;
     }
+    .imagem-contato{
+        display: block;
+    }
 }
 @media screen and (min-width: 992px){
     .cabecalho{
@@ -83,7 +85,6 @@
         width: 400px;
     }
     .menu a:hover{
-        font-size: 20px;
         text-decoration: none;
     }
     .principal{
@@ -132,7 +133,7 @@
         height: 650px;
     }
     .algumas-opcoes-titulo{
-        font-size: 48px;
+        font-size: 32px;
     }
     .container-slides{
         width: 800px;
@@ -172,5 +173,8 @@
     .inf-contato{
         width: 1000px;
         justify-content: space-between;
+    }
+    .imagem-contato{
+        display: block;
     }
 }
