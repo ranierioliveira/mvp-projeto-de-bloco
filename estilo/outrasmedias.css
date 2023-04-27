@@ -157,4 +157,20 @@
     input{
         font-size: 16px;
     }
+    .localizacao{
+        height: 600px;
+    }
+    .imagem-de-fundo{
+        height: 600px;
+    }
+    .loc{
+        height: 600px;
+    }
+    #tela{
+        width: 970px;
+    }
+    .inf-contato{
+        width: 1000px;
+        justify-content: space-between;
+    }
 }

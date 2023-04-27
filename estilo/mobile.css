@@ -305,27 +305,62 @@ font-family: 'Lato', sans-serif; */
 }
 .localizacao{
     height: 400px;
-    font-size: 20px;
     position: relative;
 }
 .imagem-de-fundo{
     background: var(--cor4) url(../imagens/fundo-reserva2.jpg) right center no-repeat;
     background-size: cover;
-    width: 100vw;
+    width: 100%;
     height: 400px;
 }
 .loc{
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 48px;
 
     position: absolute;
     top: 0;
-    width: 100vw;
+    width: 100%;
     height: 400px;
     z-index: 1;
-    background-color: rgba(100, 100, 100, 0.4);
+    background-color: rgba(100, 100, 100, 0.7);
 }
 #tela{
     width: 80vw;
+}
+.contatos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    background-color: var(--cor0);
+    color: var(--cor3);
+    font-family: var(--fonte-paragrafo);
+}
+.inf-contato{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+    width: 80vw;
+    height: 80%;
+}
+.contatos h2{
+    font-size: 18px;
+    
+}
+.blocos-contatos{
+    height: 80%;
+}
+.blocos-contatos ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 80%;
+}
+.imagem-contato img{
+    width: 100px;
 }
