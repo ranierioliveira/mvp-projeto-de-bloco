@@ -261,7 +261,7 @@ font-family: 'Lato', sans-serif; */
     height: 630px;
     background-color: whitesmoke;
     font-family: var(--fonte-paragrafo);
-    padding: 24px 0;
+    padding: 24px 0 48px;
 }
 .reserva p{
     font-size: 20px;
@@ -304,7 +304,28 @@ font-family: 'Lato', sans-serif; */
     width: 200px;
 }
 .localizacao{
-    height: 650px;
-    background: var(--cor4) url(../imagens/fundo-reserva2.jpg) center center no-repeat;
+    height: 400px;
+    font-size: 20px;
+    position: relative;
+}
+.imagem-de-fundo{
+    background: var(--cor4) url(../imagens/fundo-reserva2.jpg) right center no-repeat;
     background-size: cover;
+    width: 100vw;
+    height: 400px;
+}
+.loc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 400px;
+    z-index: 1;
+    background-color: rgba(100, 100, 100, 0.4);
+}
+#tela{
+    width: 80vw;
 }
