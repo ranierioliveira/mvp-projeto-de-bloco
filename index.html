@@ -108,18 +108,36 @@
                 </div>
 
                 <form action="#" method="get" class="formulario">
-                    <div class="nome">
-                        <label for="inome">Nome:</label><br>
-                        <input type="text" name="nome" id="inome">
+                    <h3 class="titulo-pessoal">Informações Pessoais</h3>
+                    <div class="inputs">
+                        <input type="text" name="nome" id="inome" placeholder="Nome:">
                     </div>
-                    <div class="email">
-                        <label for="iemail">E-mail</label><br>
-                        <input type="email" name="email" id="iemail">
+
+                    <div class="inputs">
+                        <input type="email" name="email" id="iemail" placeholder="E-mail:">
                     </div>
-                    <div class="mensagem">
-                        <label for="imsg">Mensagem:</label><br>
-                        <textarea name="msg" id="imsg" cols="30" rows="10"></textarea>
+                    
+                    <div class="inputs">
+                        <input type="tel" name="tel" id="itel" placeholder="Telefone"></input>
                     </div>
+
+                    <div class="radiobutton">
+                        <h3 class="radiobutton-titulo">Preferêcias</h3>
+                        <div class="radiobutton-item">
+                            <div class="radiobutton-item-circulo"></div> <span>Carnes exóticas</span>
+                        </div>
+                        <div class="radiobutton-item">
+                            <div class="radiobutton-item-circulo"></div> <span>Carnes tradicionais</span>
+                        </div>
+                        <div class="radiobutton-item">
+                            <div class="radiobutton-item-circulo"></div> <span>Ambas</span>
+                        </div>
+                    </div>
+
+                    <div class="inputs">
+                        <textarea name="msg" id="imsg" cols="30" rows="10" placeholder="Mensagem..."></textarea>
+                    </div>
+
                     <div class="enviar">
                         <input type="button" value="Enviar" class="enviar-btn">
                     </div>
@@ -162,5 +180,7 @@
             </div>
         </section>
     </main>
+
+    <script src="script/script.js"></script>
 </body>
 </html>

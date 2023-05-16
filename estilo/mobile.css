@@ -253,56 +253,103 @@ font-family: 'Lato', sans-serif; */
     background-color: var(--cor4);
 }
 
+/* Seção "Reserva" */
 .reserva{
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 20px;
-    height: 630px;
+    height: 800px;
     background-color: whitesmoke;
     font-family: var(--fonte-paragrafo);
     padding: 24px 0 48px;
 }
-.reserva p{
-    font-size: 20px;
-}
-.formulario{
-    width: 90vw;
-}
-.reserva label{
-    font-size: 16px;
-    margin-left: 10%;
-}
-.reserva input{
-    width: 80%;
-    height: 30px;
-    display: block;
-    margin: 0 auto 24px auto;
-}
-.reserva textarea{
-    width: 80%;
-    display: block;
-    margin: 0 auto 24px auto;
-}
+
 .titulo-reserva{
     font-family: var(--fonte-titulos);
     color: var(--cor0);
     margin-bottom: 24px;
     text-align: center;
 }
+
 .paragrafo-reserva{
     text-align: center;
+    font-size: 20px;
 }
+
+.formulario{
+    width: 80%;
+}
+
 .fundo-formulario{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    gap: 32px;
     align-items: center;
-    height: 550px;
+    height: 700px;
 }
+.titulo-pessoal{
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+.formulario input{
+    width: 80%;
+    height: 30px;
+    display: block;
+    margin: 0 auto 24px auto;
+}
+
+.radiobutton{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 16px;
+   
+    font-size: 16px;
+    margin: 0 auto 24px;
+    width: 80%;
+}
+
+.radiobutton-titulo{
+    align-self: center;
+}
+
+.radiobutton-item{
+    display: flex;
+    gap: 8px;
+}
+
+
+.radiobutton-item-circulo{
+    background-color: lightgray;
+    height: 16px;
+    width: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.radio-selecionado{
+    background-color: #2D2321;
+    box-shadow: 2px 2px 2px #1003005d;
+    height: 16px;
+    width: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.formulario textarea{
+    width: 80%;
+    display: block;
+    margin: 0 auto 24px auto;
+}
+
 .enviar-btn{
     width: 200px;
 }
+
+/* Seção  "Localização" */
+
 .localizacao{
     height: 400px;
     position: relative;
