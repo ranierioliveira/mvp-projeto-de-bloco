@@ -4,7 +4,7 @@ for (let i = 0; i < radio.length; i++){
     radio[i].addEventListener('click', marcar);
 
     function marcar(){
-        radio[i].classList.toggle('radio-selecionado');
+        radio[i].classList.add('radio-selecionado');
         if(i === 0){
             radio[1].classList.remove('radio-selecionado');
             radio[2].classList.remove('radio-selecionado');
