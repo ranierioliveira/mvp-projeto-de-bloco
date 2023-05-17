@@ -332,10 +332,6 @@ font-family: 'Lato', sans-serif; */
 .radio-selecionado{
     background-color: #2D2321;
     box-shadow: 2px 2px 2px #1003005d;
-    height: 16px;
-    width: 16px;
-    border-radius: 8px;
-    cursor: pointer;
 }
 
 .formulario textarea{

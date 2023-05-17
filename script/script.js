@@ -1,4 +1,5 @@
 const radio = document.querySelectorAll('.radiobutton-item-circulo');
+const menu = document.querySelector('.menu');
 
 for (let i = 0; i < radio.length; i++){
     radio[i].addEventListener('click', marcar);
@@ -15,5 +16,21 @@ for (let i = 0; i < radio.length; i++){
             radio[0].classList.remove('radio-selecionado');
             radio[1].classList.remove('radio-selecionado');
         }
+    }
+}
+
+function clicarMenuMobile(){
+    if(menu.style.display === 'none'){
+        menu.style.display = 'flex';
+    } else {
+        menu.style.display = 'none';
+    }
+}
+
+function mudouTamanho(){
+    if(window.innerWidth > 768){
+        menu.style.display = 'flex';
+    } else {
+        menu.style.display = 'none';
     }
 }
