@@ -1,5 +1,9 @@
 const radio = document.querySelectorAll('.radiobutton-item-circulo');
 const menu = document.querySelector('.menu');
+const teste = document.querySelector('.quem-somos');
+
+teste.addEventListener('click' , trocarCor);
+
 
 for (let i = 0; i < radio.length; i++){
     radio[i].addEventListener('click', marcar);
@@ -33,4 +37,8 @@ function mudouTamanho(){
     } else {
         menu.style.display = 'none';
     }
+}
+
+function trocarCor(){
+    this.classList.toggle('fundo-reserva');
 }

@@ -264,6 +264,9 @@ font-family: 'Lato', sans-serif; */
     font-family: var(--fonte-paragrafo);
     padding: 24px 0 48px;
 }
+.fundo-reserva{
+    background-color: aqua;
+}
 
 .titulo-reserva{
     font-family: var(--fonte-titulos);
@@ -324,14 +327,41 @@ font-family: 'Lato', sans-serif; */
 
 .radiobutton-item-circulo{
     background-color: lightgray;
-    height: 16px;
-    width: 16px;
+    height: 20px;
+    width: 20px;
     border-radius: 8px;
     cursor: pointer;
 }
 .radio-selecionado{
     background-color: #2D2321;
     box-shadow: 2px 2px 2px #1003005d;
+}
+
+.checkbox{
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    flex-wrap: wrap;
+    
+    font-size: 16px;
+    margin: 0 auto 24px;
+    width: 80%;
+}
+
+.checkbox-titulo{
+    margin: 0 auto;
+}
+
+.checkbox-item{
+    display: flex;
+    gap: 8px;
+}
+
+.checkbox-item-selecao{
+    background-color: lightgray;
+    height: 20px;
+    width: 20px;
+    border-radius: 4px;
 }
 
 .formulario textarea{
