@@ -4,7 +4,7 @@ const check = document.querySelectorAll('.checkbox-item-selecao');
 const certo = document.querySelectorAll('.check');
 const traco = document.querySelector('.remove');
 
-
+// Ativar / desativar menu no mobile
 function clicarMenuMobile(){
     if(menu.style.display === 'none'){
         menu.style.display = 'flex';
@@ -13,6 +13,7 @@ function clicarMenuMobile(){
     }
 }
 
+// Fazer o menu aparecer quando aumentar para telas maiores de 768px
 function mudouTamanho(){
     if(window.innerWidth > 768){
         menu.style.display = 'flex';
@@ -21,6 +22,7 @@ function mudouTamanho(){
     }
 }
 
+// Fazer a marcação dos elementos do radio button
 for (let i = 0; i < radio.length; i++){
     radio[i].addEventListener('click', marcar);
 
@@ -39,6 +41,7 @@ for (let i = 0; i < radio.length; i++){
     }
 }
 
+//Fazer a marcação do checkbox respeitando algumas condições
 for(let i = 0; i < check.length; i++){
     check[i].addEventListener('click',  marcarCheck);
 
