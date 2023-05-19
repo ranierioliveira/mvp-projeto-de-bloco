@@ -4,8 +4,6 @@ const check = document.querySelectorAll('.checkbox-item-selecao');
 const certo = document.querySelectorAll('.check');
 const traco = document.querySelector('.remove');
 
-console.log(check)
-
 function clicarMenuMobile(){
     if(menu.style.display === 'none'){
         menu.style.display = 'flex';
@@ -49,6 +47,7 @@ for(let i = 0; i < check.length; i++){
             if(!(check[1].classList.contains('checkbox-selecionado')) && !(check[2].classList.contains('checkbox-selecionado'))){
                 for(let j = 0; j < check.length; j++){
                     check[j].classList.add('checkbox-selecionado');
+                    console.log(check[j]);
                     certo[j].style.display = "block";
                 }
             } else if (check[1].classList.contains('checkbox-selecionado') && !(check[2].classList.contains('checkbox-selecionado'))) {
@@ -76,19 +75,22 @@ for(let i = 0; i < check.length; i++){
                 check[0].classList.add('checkbox-selecionado');
                 certo[i].style.display = "block";
                 traco.style.display = "block";
-            } else if (check[0].classList.contains('checkbox-selecionado') && check[2].classList.contains('checkbox-selecionado') && !(check[i].classList.contains('checkbox'))){
 
+            } else if (check[0].classList.contains('checkbox-selecionado') && check[2].classList.contains('checkbox-selecionado') && !(check[i].classList.contains('checkbox'))){
                 check[i].classList.add('checkbox-selecionado');
                 certo[i].style.display = "block";
                 traco.style.display = "none";
                 certo[0].style.display = "block";
 
-            } else if (check[i].classList.contains('checkbox-selecionado') && check[0].classList.contains('checkbox-selecionado')){
+            } else if (check[i].classList.contains('checkbox-selecionado') && check[0].classList.contains('checkbox-selecionado') && !(check[2].classList.contains('checkbox'))){
                     check[i].classList.remove('checkbox-selecionado');
                     certo[i].style.display = "none";
                     check[0].classList.remove('checkbox-selecionado');
                     traco.style.display = "none";
-            } 
+
+            } else if (check[i].classList.contains('checkbox-selecionado') && check[0].classList.contains('checkbox-selecionado') && check[2].classList.contains('checkbox')){
+                console.log('a')
+            }
 
         } else if (i === 2){
             if(!(check[0].classList.contains('checkbox-selecionado')) && !(check[1].classList.contains('checkbox-selecionado'))){
@@ -106,7 +108,7 @@ for(let i = 0; i < check.length; i++){
                 certo[i].style.display = "none";
                 check[0].classList.remove('checkbox-selecionado');
                 traco.style.display = "none";
-            }
+            } 
         }
     }
 }
