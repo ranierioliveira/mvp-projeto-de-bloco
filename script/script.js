@@ -24,9 +24,9 @@ function mudouTamanho(){
 
 // Fazer a marcação dos elementos do radio button
 for (let i = 0; i < radio.length; i++){
-    radio[i].addEventListener('click', marcar);
+    radio[i].addEventListener('click', marcarElementoDoRadio);
 
-    function marcar(){
+    function marcarElementoDoRadio(){
         this.classList.toggle('radio-selecionado');
         if(i === 0){
             radio[1].classList.remove('radio-selecionado');
@@ -43,9 +43,9 @@ for (let i = 0; i < radio.length; i++){
 
 //Fazer a marcação do checkbox respeitando algumas condições
 for(let i = 0; i < check.length; i++){
-    check[i].addEventListener('click',  marcarCheck);
+    check[i].addEventListener('click', marcarElementoDoCheckbox);
 
-    function marcarCheck(){
+    function marcarElementoDoCheckbox(){
         if(i === 0){
             //detecta se os elementos não estão selecionados
             if(!(check[1].classList.contains('checkbox-selecionado')) && !(check[2].classList.contains('checkbox-selecionado'))){
