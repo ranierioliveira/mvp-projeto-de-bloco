@@ -3,6 +3,11 @@ const radio = document.querySelectorAll('.radiobutton-item-circulo');
 const check = document.querySelectorAll('.checkbox-item-selecao');
 const certo = document.querySelectorAll('.check');
 const traco = document.querySelector('.remove');
+const menuSelect = document.querySelector('.select-opcoes');
+const mostrarMais = document.querySelector('.mostrar-mais');
+const mostrarMenos = document.querySelector('.mostrar-menos');
+const selectItem = document.querySelectorAll('.select-opcoes-item');
+const textoSelect = document.querySelector('.texto-select')
 
 // Ativa / desativa menu no mobile
 function clicarMenuMobile(){
@@ -111,5 +116,27 @@ for(let c = 1; c < check.length; c++){
             check[0].classList.remove('checkbox-selecionado');
             traco.style.display = "none";
         }
+    }
+}
+
+function exibeMenuDoSelect(){
+    menuSelect.style.display = "block";
+    mostrarMais.style.display = 'none';
+    mostrarMenos.style.display = 'block';
+}
+
+function ocultarMenuDoSelect(){
+    menuSelect.style.display = 'none';
+    mostrarMais.style.display = 'block';
+    mostrarMenos.style.display = 'none';
+}
+
+//Seleciona a opção do select
+for(let j = 0; j < selectItem.length ; j++){
+    selectItem[j].addEventListener('click', selecionaOpcaoDoSelect);
+
+    function selecionaOpcaoDoSelect(){
+        const selecionado = selectItem[j].textContent;
+        textoSelect.innerHTML = selecionado;
     }
 }
