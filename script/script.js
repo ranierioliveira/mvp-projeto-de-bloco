@@ -3,7 +3,7 @@ const radio = document.querySelectorAll('.radiobutton-item-circulo');
 const check = document.querySelectorAll('.checkbox-item-selecao');
 const certo = document.querySelectorAll('.check');
 const traco = document.querySelector('.remove');
-const menuSelect = document.querySelector('.select-opcoes');
+const selectOpcoes = document.querySelector('.select-opcoes');
 const mostrarMais = document.querySelector('.mostrar-mais');
 const mostrarMenos = document.querySelector('.mostrar-menos');
 const selectItem = document.querySelectorAll('.select-opcoes-item');
@@ -119,8 +119,12 @@ for(let c = 1; c < check.length; c++){
     }
 }
 
-function exibeMenuDoSelect(){
-    
+function exibirMenuSelect(){
+    if(selectOpcoes.style.display === 'none'){
+        selectOpcoes.style.display = 'block';
+    } else {
+        selectOpcoes.style.display = 'none';
+    }
 }
 
 for(let j = 0; j < selectItem.length ; j++){

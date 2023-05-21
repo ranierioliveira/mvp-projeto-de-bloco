@@ -278,7 +278,6 @@ font-family: 'Lato', sans-serif; */
 
 .formulario{
     width: 80%;
-    border: 1px solid black;
 }
 
 .fundo-formulario{
@@ -287,7 +286,7 @@ font-family: 'Lato', sans-serif; */
     gap: 32px;
     align-items: center;
     height: 1000px;
-    border: 1px solid black;
+    
 }
 .titulo-pessoal{
     text-align: center;
