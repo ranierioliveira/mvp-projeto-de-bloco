@@ -8,6 +8,8 @@ const mostrarMais = document.querySelector('.mostrar-mais');
 const mostrarMenos = document.querySelector('.mostrar-menos');
 const selectItem = document.querySelectorAll('.select-opcoes-item');
 const textoSelect = document.querySelector('.texto-select')
+const campos = document.querySelectorAll('.campos');
+const mensagemDeValidacao = document.querySelectorAll('.span-required')
 
 // Ativa / desativa menu no mobile
 function clicarMenuMobile(){
@@ -133,5 +135,23 @@ for(let j = 0; j < selectItem.length ; j++){
     function selecionaOpcaoDoSelect(){
         const selecionado = selectItem[j].textContent;
         textoSelect.innerHTML = selecionado;
+    }
+}
+
+function retiraParentesesTracosEspacos(telefone){
+    const semEspaco = telefone.replace(' ', '');
+    const semPrimeiroParentese = semEspaco.replace('(', '');
+    const semSegundoParentese = semPrimeiroParentese.replace(')', '');
+    const semTraco = semSegundoParentese.replace('-', '')
+    return semTraco;
+}
+
+function validaTelefone(){
+    const telefoneFormatado = retiraParentesesTracosEspacos(campos[2].value);
+    if( telefoneFormatado.length == 11){
+        campos[2].value = telefoneFormatado;
+        mensagemDeValidacao[2].style.display = 'none';
+    } else {
+        mensagemDeValidacao[2].style.display = 'block';
     }
 }

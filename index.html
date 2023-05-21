@@ -110,15 +110,18 @@
                 <form action="#" method="get" class="formulario">
                     <h3 class="titulo-pessoal">Informações Pessoais</h3>
                     <div class="inputs">
-                        <input type="text" name="nome" id="inome" placeholder="Nome:">
+                        <input type="text" name="nome" id="inome" placeholder="Nome:" class="campos">
+                        <span class="span-required">Insira seu nome completo</span>
                     </div>
 
                     <div class="inputs">
-                        <input type="email" name="email" id="iemail" placeholder="E-mail:">
+                        <input type="email" name="email" id="iemail" placeholder="E-mail:" class="campos">
+                        <span class="span-required">Digite um e-mail válido</span>
                     </div>
                     
                     <div class="inputs">
-                        <input type="tel" name="tel" id="itel" placeholder="Telefone"></input>
+                        <input type="tel" name="tel" id="itel" placeholder="Telefone" class="campos" oninput="validaTelefone()">
+                        <span class="span-required">Digite um telefone válido</span>
                     </div>
 
                     <div class="radiobutton">
