@@ -120,18 +120,9 @@ for(let c = 1; c < check.length; c++){
 }
 
 function exibeMenuDoSelect(){
-    menuSelect.style.display = "block";
-    mostrarMais.style.display = 'none';
-    mostrarMenos.style.display = 'block';
+    
 }
 
-function ocultarMenuDoSelect(){
-    menuSelect.style.display = 'none';
-    mostrarMais.style.display = 'block';
-    mostrarMenos.style.display = 'none';
-}
-
-//Seleciona a opção do select
 for(let j = 0; j < selectItem.length ; j++){
     selectItem[j].addEventListener('click', selecionaOpcaoDoSelect);
 
