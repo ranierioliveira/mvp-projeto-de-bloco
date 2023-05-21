@@ -279,6 +279,7 @@ font-family: 'Lato', sans-serif; */
 
 .formulario{
     width: 80%;
+    border: 1px solid black;
 }
 
 .fundo-formulario{
@@ -374,6 +375,39 @@ font-family: 'Lato', sans-serif; */
     display: none;
 }
 .checkbox-item-selecao .check{
+    display: none;
+}
+
+.select{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+
+
+    
+    font-size: 16px;
+    margin: 0 auto 24px;
+    width: 80%;
+}
+.select-titulo{
+    margin: auto 0;
+}
+
+.select-barra{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+
+    width: 90%;
+    background-color: rgb(226, 225, 225);
+    padding: 4px 8px;
+    border-radius: 16px;
+}
+
+span.mostrar-menos{
     display: none;
 }
 
