@@ -11,7 +11,7 @@ const textoSelect = document.querySelector('.texto-select')
 const campos = document.querySelectorAll('.campos');
 const mensagemDeErro = document.querySelectorAll('.span-required');
 const nomeRegEx = /[A-Z][a-z]* [A-Z][a-z]*/;
-const emailRegEx = /[a-zA-Z0-9_#]+[@](hotmail|gmail|outlook)[.](com)/
+const emailRegEx = /[a-zA-Z0-9_#]+[@](hotmail|gmail|outlook|yahoo)[.](com)/
 const botao = document.querySelector('.enviar-btn');
 const areaDeTexto = document.querySelector('textarea');
 
