@@ -63,6 +63,37 @@
         width: 450px;
         margin-top: 260px;
     }
+    .reserva{
+        height: 1000px;
+    }
+    .fundo-formulario{
+        height: 900px;
+    }
+    .formulario{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 24px;
+    
+        width: 70%;
+    }
+    .informacoes-pessoais{
+        min-width: 500px;
+    }
+    .select{
+        justify-content: center;
+    }
+    .area-texto{
+        min-width: 400px;
+    }
+    .enviar{
+        display: flex;
+        align-items: flex-end;
+        min-width: 100px;
+        height: 154px;
+    }
+
     .imagem-contato{
         display: block;
     }
@@ -153,10 +184,35 @@
         margin-top: 460px;
     }
     .formulario{
-        width: 1200px;
+        width: 1000px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 24px;
     }
     input{
         font-size: 16px;
+    }
+    .reserva{
+        height: 800px;
+    }
+    .fundo-formulario{
+        height: 650px;
+    }
+    .informacoes-pessoais{
+        min-width: 500px;
+    }
+    .select{
+        justify-content: center;
+    }
+    .area-texto{
+        min-width: 600px;
+    }
+    .enviar{
+        display: flex;
+        align-items: flex-end;
+        min-width: 100px;
+        height: 154px;
     }
     .localizacao{
         height: 600px;

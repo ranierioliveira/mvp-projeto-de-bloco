@@ -277,6 +277,10 @@ font-family: 'Lato', sans-serif; */
 }
 
 .formulario{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
     width: 80%;
 }
 
@@ -319,9 +323,9 @@ font-family: 'Lato', sans-serif; */
     gap: 16px;
    
     font-size: 16px;
-    margin: 0 auto 24px;
-    width: 80%;
+    margin: 0 auto 24px;  
 }
+
 
 .radiobutton-titulo{
     align-self: center;
@@ -356,9 +360,7 @@ font-family: 'Lato', sans-serif; */
     width: 80%;
 }
 
-.checkbox-titulo{
-    margin: 0 auto;
-}
+
 
 .checkbox-item{
     display: flex;
@@ -396,10 +398,9 @@ font-family: 'Lato', sans-serif; */
 
     font-size: 16px;
     margin: 0 auto 24px;
-    width: 80%;
 }
 .select-titulo{
-    margin: auto 0 16px;
+    margin: 0  auto 16px;
 }
 
 .select-barra{
@@ -437,7 +438,7 @@ span.mostrar-menos{
 .formulario textarea{
     width: 80%;
     display: block;
-    margin: 0 auto 24px auto;
+    margin: 0 auto;
 }
 
 .enviar-btn{
