@@ -12,6 +12,8 @@ const campos = document.querySelectorAll('.campos');
 const mensagemDeErro = document.querySelectorAll('.span-required');
 const nomeRegEx = /[A-Z][a-z]* [A-Z][a-z]*/;
 const emailRegEx = /[a-zA-Z0-9_#]+[@](hotmail|gmail|outlook)[.](com)/
+const botao = document.querySelector('.enviar-btn');
+const areaDeTexto = document.querySelector('textarea');
 
 
 // Ativa / desativa menu no mobile
@@ -173,4 +175,35 @@ function validaTelefone(){
     } else {
         mensagemDeErro[2].style.display = 'block';
     }
+}
+
+
+function ativaBotao(){
+    if(campos[0].value.length !== 0 && nomeRegEx.test(campos[0].value)){
+        if(campos[1].value.length !== 0 && emailRegEx.test(campos[1].value)){
+            if(mensagemDeErro[2].style.display === 'none'){
+                if(radio[0].classList.contains('radio-selecionado') || radio[1].classList.contains('radio-selecionado') || radio[2].classList.contains('radio-selecionado')){
+                  if(textoSelect.textContent !== '--Escolher opções--'){
+                    if(check[0].classList.contains('checkbox-selecionado')){
+                        if(areaDeTexto.value.length >= 5){
+                            botao.disabled = false;
+                        } else {
+                            botao.disabled = true;
+                        }
+                    } else {
+                       botao.disabled = true;
+                    }
+                } else {
+                   botao.disabled = true;
+                }  
+            }  else {
+               botao.disabled = true;
+            }
+        } else{
+           botao.disabled = true;
+        }
+    } else {
+       botao.disabled = true;
+    }
+}
 }

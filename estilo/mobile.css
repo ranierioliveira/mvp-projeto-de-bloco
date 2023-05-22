@@ -442,8 +442,17 @@ span.mostrar-menos{
 }
 
 .enviar-btn{
+    color: var(--cor3);
+    background-color: var(--cor0);
     width: 200px;
 }
+
+.enviar-btn:disabled{
+    width: 200px;
+    color: lightgray;
+    background-color: #592538a8;
+}
+
 
 /* Seção  "Localização" */
 

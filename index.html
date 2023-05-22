@@ -141,9 +141,7 @@
                     <div class="select">
                         <h3 class="select-titulo">Tipo de Carne Favorita</h3>
                         <div class="select-barra" onclick="exibirMenuSelect()">
-                            <div class="texto-select">
-                                --Escolher opções--
-                            </div> 
+                            <div class="texto-select">--Escolher opções--</div> 
                             <span class="material-symbols-outlined mostrar-menos" >
                                 expand_less
                             </span>
@@ -193,11 +191,11 @@
 
 
                     <div class="inputs area-texto">
-                        <textarea name="msg" id="imsg" cols="30" rows="10" placeholder="Mensagem..."></textarea>
+                        <textarea name="msg" id="imsg" cols="30" rows="10" placeholder="Mensagem..." oninput="ativaBotao()"></textarea>
                     </div>
 
                     <div class="enviar">
-                        <input type="button" value="Enviar" class="enviar-btn">
+                        <input type="button" value="Enviar" class="enviar-btn" disabled>
                     </div>
                         
                 </form>
