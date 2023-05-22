@@ -126,6 +126,7 @@ for(let c = 1; c < check.length; c++){
     }
 }
 
+//Exibe e oculta as opções do select
 function exibirMenuSelect(){
     if(selectOpcoes.style.display === 'none'){
         selectOpcoes.style.display = 'block';
@@ -134,6 +135,7 @@ function exibirMenuSelect(){
     }
 }
 
+//Seleciona a opção desejada do select
 for(let j = 0; j < selectItem.length ; j++){
     selectItem[j].addEventListener('click', selecionaOpcaoDoSelect);
 
@@ -143,6 +145,7 @@ for(let j = 0; j < selectItem.length ; j++){
     }
 }
 
+//Retira pontos, parenteses e espaços vazios do input de telefone
 function retiraParentesesTracosEspacos(telefone){
     const semEspaco = telefone.replace(' ', '');
     const semPrimeiroParentese = semEspaco.replace('(', '');
@@ -151,14 +154,16 @@ function retiraParentesesTracosEspacos(telefone){
     return semTraco;
 }
 
+//Valida as informações inseridas no input de nome
 function validaNome(){
-    if(nomeRegEx.test(campos[0].value)){ //não pode estar em branco
+    if(nomeRegEx.test(campos[0].value)){ 
         mensagemDeErro[0].style.display = 'none';
     } else {
         mensagemDeErro[0].style.display = 'block';
     }
 }
 
+//Valida as informações inseridas no input de email
 function validaEmail(){
     if(emailRegEx.test(campos[1].value)){ 
         mensagemDeErro[1].style.display = 'none';
@@ -167,6 +172,7 @@ function validaEmail(){
     }
 }
 
+//Valida as informações inseridas no input de telefone
 function validaTelefone(){
     const telefoneFormatado = retiraParentesesTracosEspacos(campos[2].value);
     if( telefoneFormatado.length == 11){
@@ -177,7 +183,7 @@ function validaTelefone(){
     }
 }
 
-
+//Possibilita o uso do botão após conferir algumas informações
 function ativaBotao(){
     if(campos[0].value.length !== 0 && nomeRegEx.test(campos[0].value)){
         if(campos[1].value.length !== 0 && emailRegEx.test(campos[1].value)){
