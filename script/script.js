@@ -9,7 +9,10 @@ const mostrarMenos = document.querySelector('.mostrar-menos');
 const selectItem = document.querySelectorAll('.select-opcoes-item');
 const textoSelect = document.querySelector('.texto-select')
 const campos = document.querySelectorAll('.campos');
-const mensagemDeValidacao = document.querySelectorAll('.span-required')
+const mensagemDeErro = document.querySelectorAll('.span-required');
+const nomeRegEx = /[A-Z][a-z]* [A-Z][a-z]*/;
+const emailRegEx = /[a-zA-Z0-9_#]+[@](hotmail|gmail|outlook)[.](com)/
+
 
 // Ativa / desativa menu no mobile
 function clicarMenuMobile(){
@@ -146,12 +149,28 @@ function retiraParentesesTracosEspacos(telefone){
     return semTraco;
 }
 
+function validaNome(){
+    if(nomeRegEx.test(campos[0].value)){ //não pode estar em branco
+        mensagemDeErro[0].style.display = 'none';
+    } else {
+        mensagemDeErro[0].style.display = 'block';
+    }
+}
+
+function validaEmail(){
+    if(emailRegEx.test(campos[1].value)){ 
+        mensagemDeErro[1].style.display = 'none';
+    } else {
+        mensagemDeErro[1].style.display = 'block';
+    }
+}
+
 function validaTelefone(){
     const telefoneFormatado = retiraParentesesTracosEspacos(campos[2].value);
     if( telefoneFormatado.length == 11){
         campos[2].value = telefoneFormatado;
-        mensagemDeValidacao[2].style.display = 'none';
+        mensagemDeErro[2].style.display = 'none';
     } else {
-        mensagemDeValidacao[2].style.display = 'block';
+        mensagemDeErro[2].style.display = 'block';
     }
 }

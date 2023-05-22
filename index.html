@@ -110,12 +110,12 @@
                 <form action="#" method="get" class="formulario">
                     <h3 class="titulo-pessoal">Informações Pessoais</h3>
                     <div class="inputs">
-                        <input type="text" name="nome" id="inome" placeholder="Nome:" class="campos">
+                        <input type="text" name="nome" id="inome" placeholder="Nome:" class="campos" oninput="validaNome()">
                         <span class="span-required">Insira seu nome completo</span>
                     </div>
 
                     <div class="inputs">
-                        <input type="email" name="email" id="iemail" placeholder="E-mail:" class="campos">
+                        <input type="email" name="email" id="iemail" placeholder="E-mail:" class="campos" oninput="validaEmail()">
                         <span class="span-required">Digite um e-mail válido</span>
                     </div>
                     

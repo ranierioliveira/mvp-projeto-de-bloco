@@ -297,11 +297,18 @@ font-family: 'Lato', sans-serif; */
     width: 80%;
     height: 30px;
     display: block;
-    margin: 0 auto 24px auto;
+    margin: 0 auto ;
+}
+
+.inputs{
+    margin-bottom: 24px;
 }
 
 .span-required{
     display: none;
+    font-size: 14px;
+    text-align: center;
+    color: #e60d2a;
 }
 
 .radiobutton{
