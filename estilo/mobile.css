@@ -23,6 +23,7 @@ font-family: 'Lato', sans-serif; */
     text-decoration: none;
 }
 
+/* Cabeçalho */
 .cabecalho{
     display: flex;
     flex-direction: column;
@@ -58,6 +59,8 @@ font-family: 'Lato', sans-serif; */
 .menu a:hover{
     text-decoration: underline;
 }
+
+/* Seção Principal */
 .principal{
     background: black url('../imagens/foto-principal.jpg') center center no-repeat;
     background-size: cover;
@@ -90,6 +93,8 @@ font-family: 'Lato', sans-serif; */
     flex-direction: column;
     align-items: center;
 }
+
+/* Seção quem somos */
 .quem-somos{
     display: flex;
     align-items: center;
@@ -134,9 +139,10 @@ font-family: 'Lato', sans-serif; */
 .quem-somos img{
     width: 250px;
 }
+
+/* Seção para apresentar alumas opções de corte */
 .algumas-opcoes-secao{
     background-color: var(--cor4);
-    
     color: var(--cor3);
     font-size: 20px; 
     padding-top: 64px;
@@ -263,26 +269,22 @@ font-family: 'Lato', sans-serif; */
     background-color: whitesmoke;
     font-family: var(--fonte-paragrafo);
 }
-
 .titulo-reserva{
     font-family: var(--fonte-titulos);
     color: var(--cor0);
     margin-bottom: 24px;
     text-align: center;
 }
-
 .paragrafo-reserva{
     text-align: center;
     font-size: 20px;
 }
-
 .formulario{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 80%;
 }
-
 .fundo-formulario{
     display: flex;
     flex-direction: column;
@@ -302,18 +304,15 @@ font-family: 'Lato', sans-serif; */
     display: block;
     margin: 0 auto ;
 }
-
 .inputs{
     margin-bottom: 24px;
 }
-
 .span-required{
     display: none;
     font-size: 14px;
     text-align: center;
     color: #e60d2a;
 }
-
 .radiobutton{
     display: flex;
     flex-direction: column;
@@ -324,18 +323,13 @@ font-family: 'Lato', sans-serif; */
     font-size: 16px;
     margin: 0 auto 24px;  
 }
-
-
 .radiobutton-titulo{
     align-self: center;
 }
-
 .radiobutton-item{
     display: flex;
     gap: 8px;
 }
-
-
 .radiobutton-item-circulo{
     background-color: lightgray;
     height: 20px;
@@ -347,7 +341,6 @@ font-family: 'Lato', sans-serif; */
     background-color: var(--cor0);
     box-shadow: 2px 2px 2px #1003005d;
 }
-
 .checkbox{
     display: flex;
     justify-content: space-between;
@@ -358,12 +351,10 @@ font-family: 'Lato', sans-serif; */
     margin: 0 auto 24px;
     width: 80%;
 }
-
 .checkbox-item{
     display: flex;
     gap: 8px;
 }
-
 .checkbox-item-selecao{
     display: flex;
     justify-content: center;
@@ -374,32 +365,27 @@ font-family: 'Lato', sans-serif; */
     width: 20px;
     border-radius: 4px;
 }
-
 .checkbox-selecionado{
     background-color: #592538;
     color: var(--cor3);
 }
-
 .checkbox-item-selecao .remove{
     display: none;
 }
 .checkbox-item-selecao .check{
     display: none;
 }
-
 .select{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
     font-size: 16px;
     margin: 0 auto 24px;
 }
 .select-titulo{
     margin: 0  auto 16px;
 }
-
 .select-barra{
     display: flex;
     justify-content: space-between;
@@ -411,7 +397,6 @@ font-family: 'Lato', sans-serif; */
     padding: 4px 8px;
     border-radius: 16px;
 }
-
 .select-opcoes{
     display: none;
     list-style-type: none;
@@ -419,7 +404,6 @@ font-family: 'Lato', sans-serif; */
     border-radius: 16px;
     box-shadow: 2px 2px 5px #2d23214b;
 }
-
 .select-opcoes-item{
     padding: 8px 0 8px 16px;
     font-size: 14px;
@@ -427,31 +411,28 @@ font-family: 'Lato', sans-serif; */
 .select-opcoes-item:hover{
     background-color: rgb(236, 233, 233);
 }
-
 span.mostrar-menos{
     display: none;
 }
-
 .formulario textarea{
     width: 80%;
     display: block;
     margin: 0 auto;
 }
-
+.enviar{
+    width: 200px;
+    align-self: center;
+}
 .enviar-btn{
     color: var(--cor3);
     background-color: var(--cor0);
 }
-
 .enviar-btn:disabled{
-    width: 200px;
     color: lightgray;
     background-color: #592538a8;
 }
 
-
 /* Seção  "Localização" */
-
 .localizacao{
     height: 400px;
     position: relative;
@@ -478,6 +459,8 @@ span.mostrar-menos{
 #tela{
     width: 80vw;
 }
+
+/* Seção contatos */
 .contatos{
     display: flex;
     align-items: center;

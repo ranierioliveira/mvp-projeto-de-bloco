@@ -14,12 +14,14 @@
     .menu a:hover{
         text-decoration: none;
     }
+
     .principal{
         background-attachment: fixed;
     }
     .centralizadora{
         justify-content: space-around;
     }
+
     .quem-somos{
         height: 900px;
         font-size: 20px;
@@ -40,6 +42,7 @@
         font-size: 20px;
         margin-bottom: 32px;
     }
+
     .algumas-opcoes{
         height: 500px;
     }
@@ -63,6 +66,7 @@
         width: 450px;
         margin-top: 260px;
     }
+
     .reserva{
         height: 1000px;
     }
@@ -81,7 +85,6 @@
     .informacoes-pessoais{
         min-width: 500px;
     }
-
     .select{
         justify-content: flex-start;
     }
@@ -95,9 +98,9 @@
     }
     .enviar{
         display: flex;
-        align-items: flex-end;
-      
+        align-items: flex-end;  
     }
+
     .imagem-contato{
         display: block;
     }
@@ -122,6 +125,7 @@
     .menu a:hover{
         text-decoration: none;
     }
+
     .principal{
         height: 900px;
         border: 1px solid black;
@@ -143,6 +147,7 @@
         width: 1200px;
         margin: 0 auto;
     }
+
     .quem-somos{
         padding: 48px 0px;
         height: 700px;
@@ -164,6 +169,7 @@
         width: 250px;
         height: 60px;
     }
+
     .algumas-opcoes{
         height: 650px;
     }
@@ -235,6 +241,7 @@
         min-width: 100px;
         height: 150px;
     }
+    
     .localizacao{
         height: 600px;
     }
