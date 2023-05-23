@@ -74,26 +74,30 @@
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 24px;
-    
+        column-gap: 64px;
+        row-gap: 24px;
         width: 70%;
     }
     .informacoes-pessoais{
         min-width: 500px;
     }
+
     .select{
-        justify-content: center;
+        justify-content: flex-start;
     }
     .area-texto{
+        align-self: flex-end;
+        margin-bottom: 0;
+    }
+    .area-texto textarea{
+        margin: 0;
         min-width: 400px;
     }
     .enviar{
         display: flex;
         align-items: flex-end;
-        min-width: 100px;
-        height: 154px;
+      
     }
-
     .imagem-contato{
         display: block;
     }
@@ -190,8 +194,13 @@
         flex-wrap: wrap;
         gap: 24px;
     }
-    input{
+    .formulario input{
         font-size: 16px;
+        margin: 0;
+        width: 500px;
+    }
+    .inputs{
+        width: 500px;
     }
     .reserva{
         height: 800px;
@@ -202,17 +211,29 @@
     .informacoes-pessoais{
         min-width: 500px;
     }
+    .informacoes-pessoais h3{
+        text-align: left;
+    }
     .select{
-        justify-content: center;
+        justify-content: flex-start;
+        margin: 0;
+    }
+    .radiobutton{
+        justify-content: space-between;
     }
     .area-texto{
-        min-width: 600px;
+        align-self: flex-end;
+        margin-bottom: 0;
+    }
+    .area-texto textarea{
+        margin: 0;
+        min-width: 500px;
     }
     .enviar{
         display: flex;
         align-items: flex-end;
         min-width: 100px;
-        height: 154px;
+        height: 150px;
     }
     .localizacao{
         height: 600px;

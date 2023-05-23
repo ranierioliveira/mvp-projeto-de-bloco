@@ -280,7 +280,6 @@ font-family: 'Lato', sans-serif; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
     width: 80%;
 }
 
@@ -359,8 +358,6 @@ font-family: 'Lato', sans-serif; */
     margin: 0 auto 24px;
     width: 80%;
 }
-
-
 
 .checkbox-item{
     display: flex;
@@ -444,7 +441,6 @@ span.mostrar-menos{
 .enviar-btn{
     color: var(--cor3);
     background-color: var(--cor0);
-    width: 200px;
 }
 
 .enviar-btn:disabled{
