@@ -83,7 +83,6 @@ function marcarElementoDoCheckboxIndice0(){
     }
 }
 
-
 //Faz a marcação do índice 1 e 2 do checkbox
 for(let c = 1; c < check.length; c++){
     check[c].addEventListener('click', marcarElementoDoCheckboxIndice1e2);

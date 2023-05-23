@@ -244,19 +244,19 @@ font-family: 'Lato', sans-serif; */
 
 /* Vai ficar marcado quando selecionado */
 #radio1:checked ~ .navigation-auto .auto-btn1{
-    background-color: var(--cor3);
+    background-color: var(--cor0);
 }
 #radio2:checked ~ .navigation-auto .auto-btn2{
-    background-color: var(--cor4);
+    background-color: var(--cor0);
 }
 #radio3:checked ~ .navigation-auto .auto-btn3{
-    background-color: var(--cor4);
+    background-color: var(--cor0);
 }
 #radio4:checked ~ .navigation-auto .auto-btn4{
-    background-color: var(--cor4);
+    background-color: var(--cor0);
 }
 #radio5:checked ~ .navigation-auto .auto-btn5{
-    background-color: var(--cor4);
+    background-color: var(--cor0);
 }
 
 /* Seção "Reserva" */
