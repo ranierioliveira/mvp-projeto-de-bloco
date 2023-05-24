@@ -142,24 +142,77 @@ font-family: 'Lato', sans-serif; */
 
 /* Seção para apresentar alumas opções de corte */
 .algumas-opcoes-secao{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    
     background-color: var(--cor4);
     color: var(--cor3);
     font-size: 20px; 
-    padding-top: 64px;
+    height: 600px;
 }
-.algumas-opcoes{
+
+.algumas-opcoes-titulo{
+    font-family: var(--fonte-titulos);
+    text-align: center;
+}
+.compre-agora{
+    font-family: var(--fonte-titulos);
+    height: 60px;
+    width: 200px;
+    font-size: 20px;
+    color: var(--cor0);
+    font-weight: 700;
+}
+.container-slider{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 250px;
+}
+.container-imagens{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 380px; /*Depende o tamanho em que se deseja o slide */
+    position: relative;
+}
+.slider{
+    position: absolute;
+    width: 100%;
+    border-radius: 10px;
+    opacity: 0; /*Por padrão opacidade 0*/
+    transition: opacity .2s;
+    height: 250px;
+}
+.on{
+    opacity: 1;
+}
+
+#botao-avancar, #botao-voltar{
+    width: 50px;
+    height: 50px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#botao-avancar img, #botao-voltar img{
+    width: 100%;
+    height: 100%;
+}
+/* .algumas-opcoes{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 450px;
-}
-.algumas-opcoes-titulo{
-    font-family: var(--fonte-titulos);
-    text-align: center;
-}
+} */
 
-.container-slides{
+/* .container-slides{
     width: 380px;
     height: 250px;
     overflow: hidden;
@@ -175,7 +228,7 @@ font-family: 'Lato', sans-serif; */
     display: none;
 }
 .slide{
-    /* Tamanho das tags que contém as imagens em relação a tag slides */
+    
     width: 20%;
     position: relative;
     transition: 2s;
@@ -205,7 +258,6 @@ font-family: 'Lato', sans-serif; */
     background-color: var(--cor3);
 }
 
-/* Quando o primeiro radio (radio1) estiver ativo a primeira imagem (first) vai ter zero de margem */
 #radio1:checked ~ .first{
     margin-left: 0;
 }
@@ -222,7 +274,7 @@ font-family: 'Lato', sans-serif; */
     margin-left: -80%;
 }
 
-/*Vão ficar marcadas quando clicadas*/
+
 .navigation-auto div{
     border: 2px solid blue;
     padding: 5px;
@@ -242,7 +294,7 @@ font-family: 'Lato', sans-serif; */
     margin-right: 8px;
 }
 
-/* Vai ficar marcado quando selecionado */
+
 #radio1:checked ~ .navigation-auto .auto-btn1{
     background-color: var(--cor0);
 }
@@ -257,7 +309,7 @@ font-family: 'Lato', sans-serif; */
 }
 #radio5:checked ~ .navigation-auto .auto-btn5{
     background-color: var(--cor0);
-}
+} */
 
 /* Seção "Reserva" */
 .reserva{

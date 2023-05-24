@@ -43,13 +43,23 @@
         margin-bottom: 32px;
     }
 
-    .algumas-opcoes{
+    .algumas-opcoes-secao{
         height: 500px;
     }
     .algumas-opcoes-titulo{
         font-size: 32px;
     }
-    .container-slides{
+    .container-slider{
+        height: 300px;
+    }
+    .container-imagens{
+        width: 450px;
+    }
+    .slider{
+        height: 300px;
+    }
+
+    /* .container-slides{
         width: 450px;
         height: 300px;
     }
@@ -65,7 +75,7 @@
     .navigation-auto{
         width: 450px;
         margin-top: 260px;
-    }
+    } */
 
     .reserva{
         height: 1000px;
@@ -170,13 +180,22 @@
         height: 60px;
     }
 
-    .algumas-opcoes{
+    .algumas-opcoes-secao{
         height: 650px;
     }
     .algumas-opcoes-titulo{
         font-size: 32px;
     }
-    .container-slides{
+    .container-slider{
+        height: 400px;
+    }
+    .container-imagens{
+        width: 750px;
+    }
+    .slider{
+        height: 400px;
+    }
+    /* .container-slides{
         width: 800px;
         height: 500px;
     }
@@ -191,7 +210,7 @@
     }
     .navigation-auto{
         width: 800px;
-        margin-top: 460px;
+        margin-top: 460px; */
     }
     .formulario{
         width: 1000px;

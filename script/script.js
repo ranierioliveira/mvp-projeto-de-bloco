@@ -14,6 +14,9 @@ const nomeRegEx = /[A-Z][a-z]* [A-Z][a-z]*/;
 const emailRegEx = /[a-zA-Z0-9_#]+[@](hotmail|gmail|outlook|yahoo)[.](com)/
 const botao = document.querySelector('.enviar-btn');
 const areaDeTexto = document.querySelector('textarea');
+const slider = document.querySelectorAll('.slider');
+const botaoVoltar = document.getElementById('botao-voltar');
+const botaoAvancar = document.getElementById('botao-avancar');
 
 
 // Ativa / desativa menu no mobile
@@ -211,4 +214,37 @@ function ativaBotao(){
        botao.disabled = true;
     }
 }
+}
+
+//Muda os slides
+let slideAtual = 0;
+botaoVoltar.addEventListener('click', slideAnterior);
+botaoAvancar.addEventListener('click', slidePosterior);
+
+function slidePosterior(){
+    escondeSlide();
+    if(slideAtual === slider.length - 1){
+        slideAtual = 0;
+    } else {
+        slideAtual++
+    }
+    mostraSlide();
+}
+
+function slideAnterior(){
+    escondeSlide();
+    if(slideAtual === 0){
+        slideAtual = slider.length - 1;
+    } else {
+        slideAtual--;
+    }
+    mostraSlide();
+}
+
+function escondeSlide(){
+    slider.forEach(item => item.classList.remove('on'));
+}
+
+function mostraSlide(){
+    slider[slideAtual].classList.add('on');
 }
