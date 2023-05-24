@@ -164,13 +164,13 @@ font-family: 'Lato', sans-serif; */
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 200px;
+    height: 250px;
 }
 .container-imagens{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 200px; /*Depende o tamanho em que se deseja o slide */
+    width: 380px; /*Depende o tamanho em que se deseja o slide */
     position: relative;
 }
 .slider{
@@ -179,7 +179,7 @@ font-family: 'Lato', sans-serif; */
     border-radius: 10px;
     opacity: 0; /*Por padrão opacidade 0*/
     transition: opacity .2s;
-    height: 200px;
+    height: 250px;
 }
 
 .on{
