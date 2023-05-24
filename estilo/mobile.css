@@ -158,7 +158,7 @@ font-family: 'Lato', sans-serif; */
     text-align: center;
 }
 
-/* .container-slider{
+.container-slider{
     display: flex;
     gap: 1rem;
     align-items: center;
@@ -197,7 +197,7 @@ font-family: 'Lato', sans-serif; */
 #botao-avancar img, #botao-voltar img{
     width: 100%;
     height: 100%;
-}*/
+}
 .compre-agora{
     font-family: var(--fonte-titulos);
     height: 60px;
