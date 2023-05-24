@@ -157,14 +157,7 @@ font-family: 'Lato', sans-serif; */
     font-family: var(--fonte-titulos);
     text-align: center;
 }
-.compre-agora{
-    font-family: var(--fonte-titulos);
-    height: 60px;
-    width: 200px;
-    font-size: 20px;
-    color: var(--cor0);
-    font-weight: 700;
-}
+
 .container-slider{
     display: flex;
     gap: 1rem;
@@ -199,11 +192,22 @@ font-family: 'Lato', sans-serif; */
     background-color: transparent;
     cursor: pointer;
 }
-
 #botao-avancar img, #botao-voltar img{
     width: 100%;
     height: 100%;
 }
+.compre-agora{
+    font-family: var(--fonte-titulos);
+    height: 60px;
+    width: 200px;
+    font-size: 20px;
+    color: var(--cor0);
+    font-weight: 700;
+}
+.compre-agora:hover{
+    width: 180px;
+}
+
 /* .algumas-opcoes{
     display: flex;
     flex-direction: column;
