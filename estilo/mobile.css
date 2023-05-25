@@ -130,7 +130,7 @@
     height: 30px;
     font-size: 18px;
     color: var(--cor1);
-    border: 2px solid var(--cor1);
+    border: 1px solid var(--cor1);
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.466);
 }
 .saiba-mais:hover{
@@ -378,12 +378,10 @@ span.mostrar-menos{
 .enviar-btn{
     color: var(--cor3);
     background-color: var(--cor0);
-    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.466);
 }
 .enviar-btn:disabled{
     color: lightgray;
     background-color: #592538a8;
-    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.466);
 }
 
 /* Seção  "Localização" */
