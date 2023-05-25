@@ -38,22 +38,40 @@ function mudouTamanho(){
 }
 
 // Faz a marcação dos elementos do radio button
-for(let i = 0; i < radio.length; i++){
-    radio[i].addEventListener('click', marcarElementoDoRadio);
+// for(let i = 0; i < radio.length; i++){
+//     radio[i].addEventListener('click', marcarElementoDoRadio);
 
-    function marcarElementoDoRadio(){
-        radio[i].classList.add('radio-selecionado');
-        if(i === 0){
-            radio[1].classList.remove('radio-selecionado');
-            radio[2].classList.remove('radio-selecionado');
-        } else if (i === 1){
-            radio[0].classList.remove('radio-selecionado');
-            radio[2].classList.remove('radio-selecionado');
-        } else if (i === 2){
-            radio[0].classList.remove('radio-selecionado');
-            radio[1].classList.remove('radio-selecionado');
-        }
-    }
+//     function marcarElementoDoRadio(){
+//         radio[i].classList.add('radio-selecionado');
+//         if(i === 0){
+//             radio[1].classList.remove('radio-selecionado');
+//             radio[2].classList.remove('radio-selecionado');
+//         } else if (i === 1){
+//             radio[0].classList.remove('radio-selecionado');
+//             radio[2].classList.remove('radio-selecionado');
+//         } else if (i === 2){
+//             radio[0].classList.remove('radio-selecionado');
+//             radio[1].classList.remove('radio-selecionado');
+//         }
+//     }
+// }
+radio[0].addEventListener('click', marcarElementoDoRadio1);
+function marcarElementoDoRadio1(){
+    radio[0].classList.add('radio-selecionado');
+    radio[1].classList.remove('radio-selecionado');
+    radio[2].classList.remove('radio-selecionado');
+}
+radio[1].addEventListener('click', marcarElementoDoRadio2);
+function marcarElementoDoRadio2(){
+    radio[1].classList.add('radio-selecionado');
+    radio[0].classList.remove('radio-selecionado');
+    radio[2].classList.remove('radio-selecionado');
+}
+radio[2].addEventListener('click', marcarElementoDoRadio3);
+function marcarElementoDoRadio3(){
+    radio[2].classList.add('radio-selecionado');
+    radio[0].classList.remove('radio-selecionado');
+    radio[1].classList.remove('radio-selecionado');
 }
 
 //Faz a marcação do checkbox no índice 0
