@@ -36,6 +36,7 @@
     color: var(--cor3);
     padding: 16px 14px 8px 14px;
     margin-bottom: 64px;
+    box-shadow: 2px 2px 5px #10030075;
 }
 .cabecalho img{
     width: 120px;
@@ -130,9 +131,10 @@
     font-size: 18px;
     color: var(--cor1);
     border: 2px solid var(--cor1);
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.466);
 }
 .saiba-mais:hover{
-    box-shadow: 1px 1px 1px var(--cor4);
+    box-shadow: 1px 1px 3px var(--cor4);
 }
 .quem-somos img{
     width: 250px;
@@ -376,10 +378,12 @@ span.mostrar-menos{
 .enviar-btn{
     color: var(--cor3);
     background-color: var(--cor0);
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.466);
 }
 .enviar-btn:disabled{
     color: lightgray;
     background-color: #592538a8;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.466);
 }
 
 /* Seção  "Localização" */
