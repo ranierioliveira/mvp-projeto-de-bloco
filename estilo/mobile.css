@@ -430,10 +430,6 @@ span.mostrar-menos{
     font-size: 18px;
     
 }
-.telefone{
-    text-decoration: none;
-    color: var(--cor3);
-}
 .blocos-contatos{
     height: 80%;
 }
@@ -445,6 +441,10 @@ span.mostrar-menos{
     justify-content: space-around;
     height: 80%;
 }
+.blocos-contatos a{
+    text-decoration: none;
+    color: var(--cor3);
+}   
 .imagem-contato{
     display: none;
 }
