@@ -37,24 +37,6 @@ function mudouTamanho(){
     }
 }
 
-// Faz a marcação dos elementos do radio button
-// for(let i = 0; i < radio.length; i++){
-//     radio[i].addEventListener('click', marcarElementoDoRadio);
-
-//     function marcarElementoDoRadio(){
-//         radio[i].classList.add('radio-selecionado');
-//         if(i === 0){
-//             radio[1].classList.remove('radio-selecionado');
-//             radio[2].classList.remove('radio-selecionado');
-//         } else if (i === 1){
-//             radio[0].classList.remove('radio-selecionado');
-//             radio[2].classList.remove('radio-selecionado');
-//         } else if (i === 2){
-//             radio[0].classList.remove('radio-selecionado');
-//             radio[1].classList.remove('radio-selecionado');
-//         }
-//     }
-// }
 radio[0].addEventListener('click', marcarElementoDoRadio1);
 function marcarElementoDoRadio1(){
     radio[0].classList.add('radio-selecionado');
@@ -104,45 +86,59 @@ function marcarElementoDoCheckboxIndice0(){
     }
 }
 
-//Faz a marcação do índice 1 e 2 do checkbox
-for(let c = 1; c < check.length; c++){
-    check[c].addEventListener('click', marcarElementoDoCheckboxIndice1e2);
-    let a;
-    let b;
+check[1].addEventListener('click', marcarElementoDoCheckboxIndice1);
+function marcarElementoDoCheckboxIndice1(){
+    if(!(check[0].classList.contains('checkbox-selecionado')) && !(check[2].classList.contains('checkbox-selecionado'))){
+        check[1].classList.add('checkbox-selecionado');
+        check[0].classList.add('checkbox-selecionado');
+        certo[1].style.display = "block";
+        traco.style.display = "block";
 
-    if(c === 1){
-        a = c;
-        b = c + 1;
-    } else {
-        a = c;
-        b = c - 1;
-    }
-
-    function marcarElementoDoCheckboxIndice1e2(){
-        if(!(check[0].classList.contains('checkbox-selecionado')) && !(check[b].classList.contains('checkbox-selecionado'))){
-            check[a].classList.add('checkbox-selecionado');
-            check[0].classList.add('checkbox-selecionado');
-            certo[a].style.display = "block";
-            traco.style.display = "block";
-    
-        } else if (check[0].classList.contains('checkbox-selecionado') && check[b].classList.contains('checkbox-selecionado')){
-            if(check[a].classList.contains('checkbox-selecionado')){
-                check[a].classList.remove('checkbox-selecionado');
-                certo[a].style.display = 'none';
-                certo[0].style.display = 'none';
-                traco.style.display = 'block'
-            } else {
-                check[a].classList.add('checkbox-selecionado');
-                certo[a].style.display = "block";
-                traco.style.display = 'none';
-                certo[0].style.display = 'block';
-            }
-        } else if ((check[0].classList.contains('checkbox-selecionado') && !(check[b].classList.contains('checkbox-selecionado')))){
-            check[a].classList.remove('checkbox-selecionado');
-            certo[a].style.display = "none";
-            check[0].classList.remove('checkbox-selecionado');
-            traco.style.display = "none";
+    } else if (check[0].classList.contains('checkbox-selecionado') && check[2].classList.contains('checkbox-selecionado')){
+        if(check[1].classList.contains('checkbox-selecionado')){
+            check[1].classList.remove('checkbox-selecionado');
+            certo[1].style.display = 'none';
+            certo[0].style.display = 'none';
+            traco.style.display = 'block'
+        } else {
+            check[1].classList.add('checkbox-selecionado');
+            certo[1].style.display = "block";
+            traco.style.display = 'none';
+            certo[0].style.display = 'block';
         }
+    } else if ((check[0].classList.contains('checkbox-selecionado') && !(check[2].classList.contains('checkbox-selecionado')))){
+        check[1].classList.remove('checkbox-selecionado');
+        certo[1].style.display = "none";
+        check[0].classList.remove('checkbox-selecionado');
+        traco.style.display = "none";
+    }
+}
+
+check[2].addEventListener('click', marcarElementoDoCheckboxIndice2);
+function marcarElementoDoCheckboxIndice2(){
+    if(!(check[0].classList.contains('checkbox-selecionado')) && !(check[1].classList.contains('checkbox-selecionado'))){
+        check[2].classList.add('checkbox-selecionado');
+        check[0].classList.add('checkbox-selecionado');
+        certo[2].style.display = "block";
+        traco.style.display = "block";
+
+    } else if (check[0].classList.contains('checkbox-selecionado') && check[1].classList.contains('checkbox-selecionado')){
+        if(check[2].classList.contains('checkbox-selecionado')){
+            check[2].classList.remove('checkbox-selecionado');
+            certo[2].style.display = 'none';
+            certo[0].style.display = 'none';
+            traco.style.display = 'block'
+        } else {
+            check[2].classList.add('checkbox-selecionado');
+            certo[2].style.display = "block";
+            traco.style.display = 'none';
+            certo[0].style.display = 'block';
+        }
+    } else if ((check[0].classList.contains('checkbox-selecionado') && !(check[1].classList.contains('checkbox-selecionado')))){
+        check[2].classList.remove('checkbox-selecionado');
+        certo[2].style.display = "none";
+        check[0].classList.remove('checkbox-selecionado');
+        traco.style.display = "none";
     }
 }
 

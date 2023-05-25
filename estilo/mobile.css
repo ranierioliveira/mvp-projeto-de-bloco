@@ -2,9 +2,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Allerta&family=Lato:wght@400;700&display=swap');
 
-/* font-family: 'Allerta', sans-serif;
-font-family: 'Lato', sans-serif; */
-
 :root{
     --cor0: #592538;
     --cor1: #2D2321;
@@ -209,113 +206,6 @@ font-family: 'Lato', sans-serif; */
 .compre-agora:hover{
     width: 180px;
 }
-
-/* .algumas-opcoes{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 450px;
-} */
-
-/* .container-slides{
-    width: 380px;
-    height: 250px;
-    overflow: hidden;
-    margin: 0 auto;
-    
-}
-.slides{
-    display: flex;
-    width: 500%;
-    height: 250px;
-}
-.slides input{
-    display: none;
-}
-.slide{
-    
-    width: 20%;
-    position: relative;
-    transition: 2s;
-}
-.slide img{
-    width: 380px;
-    height: 100%;
-}
-.manual-navigation{
-    position: absolute;
-    margin-top: -40px;
-    width: 380px;
-    display: flex;
-    justify-content: center;
-}
-.manual-btn{
-    border: 2px solid var(--cor4);
-    padding: 5px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: .5s;
-}
-.manual-btn:not(:last-child){
-    margin-right: 8px;
-}
-.manual-btn:hover{
-    background-color: var(--cor3);
-}
-
-#radio1:checked ~ .first{
-    margin-left: 0;
-}
-#radio2:checked ~ .first{
-    margin-left: -20%;
-}
-#radio3:checked ~ .first{
-    margin-left: -40%;
-}
-#radio4:checked ~ .first{
-    margin-left: -60%;
-}
-#radio5:checked ~ .first{
-    margin-left: -80%;
-}
-
-
-.navigation-auto div{
-    border: 2px solid blue;
-    padding: 5px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: .5s;
-}
-.navigation-auto{
-    display: flex;
-    justify-content: center;
-    
-    position: absolute;
-    width: 380px;
-    margin-top: 210px;
-}
-.navigation-auto div:not(:last-child){
-    margin-right: 8px;
-}
-
-
-#radio1:checked ~ .navigation-auto .auto-btn1{
-    background-color: var(--cor0);
-}
-#radio2:checked ~ .navigation-auto .auto-btn2{
-    background-color: var(--cor0);
-}
-#radio3:checked ~ .navigation-auto .auto-btn3{
-    background-color: var(--cor0);
-}
-#radio4:checked ~ .navigation-auto .auto-btn4{
-    background-color: var(--cor0);
-}
-#radio5:checked ~ .navigation-auto .auto-btn5{
-    background-color: var(--cor0);
-} */
 
 /* Seção "Reserva" */
 .reserva{
@@ -539,6 +429,10 @@ span.mostrar-menos{
 .contatos h2{
     font-size: 18px;
     
+}
+.telefone{
+    text-decoration: none;
+    color: var(--cor3);
 }
 .blocos-contatos{
     height: 80%;
