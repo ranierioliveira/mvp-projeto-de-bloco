@@ -30,6 +30,7 @@
     overflow: hidden;
     position: fixed;
     width: 100vw;
+    z-index: 1;
 
     background-color: #100300ef;
     color: var(--cor3);
@@ -202,6 +203,7 @@
     font-size: 20px;
     color: var(--cor0);
     font-weight: 700;
+    border-radius: 8px;
 } 
 .compre-agora:hover{
     width: 180px;
