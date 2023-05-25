@@ -42,7 +42,7 @@ for(let i = 0; i < radio.length; i++){
     radio[i].addEventListener('click', marcarElementoDoRadio);
 
     function marcarElementoDoRadio(){
-        this.classList.toggle('radio-selecionado');
+        radio[i].classList.add('radio-selecionado');
         if(i === 0){
             radio[1].classList.remove('radio-selecionado');
             radio[2].classList.remove('radio-selecionado');
