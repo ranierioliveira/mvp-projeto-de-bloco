@@ -37,24 +37,46 @@ function mudouTamanho(){
     }
 }
 
-radio[0].addEventListener('click', marcarElementoDoRadio1);
-function marcarElementoDoRadio1(){
-    radio[0].classList.add('radio-selecionado');
+radio.forEach((elemento, index) => {
+    elemento.addEventListener('click', () => {
+        marcou(index);
+    })
+    // console.log(elemento, index);
+});
+
+function marcou(indiceClicado){
+    console.log(indiceClicado);
+    radio[indiceClicado].classList.toggle('radio-selecionado');
+    if(indiceClicado === 0){
     radio[1].classList.remove('radio-selecionado');
     radio[2].classList.remove('radio-selecionado');
+    } else if (indiceClicado === 1){
+        radio[0].classList.remove('radio-selecionado');
+        radio[2].classList.remove('radio-selecionado');
+    } else if (indiceClicado === 2){
+        radio[0].classList.remove('radio-selecionado');
+        radio[1].classList.remove('radio-selecionado');
+    }
 }
-radio[1].addEventListener('click', marcarElementoDoRadio2);
-function marcarElementoDoRadio2(){
-    radio[1].classList.add('radio-selecionado');
-    radio[0].classList.remove('radio-selecionado');
-    radio[2].classList.remove('radio-selecionado');
-}
-radio[2].addEventListener('click', marcarElementoDoRadio3);
-function marcarElementoDoRadio3(){
-    radio[2].classList.add('radio-selecionado');
-    radio[0].classList.remove('radio-selecionado');
-    radio[1].classList.remove('radio-selecionado');
-}
+
+// radio[0].addEventListener('click', marcarElementoDoRadio1);
+// function marcarElementoDoRadio1(){
+//     radio[0].classList.add('radio-selecionado');
+//     radio[1].classList.remove('radio-selecionado');
+//     radio[2].classList.remove('radio-selecionado');
+// }
+// radio[1].addEventListener('click', marcarElementoDoRadio2);
+// function marcarElementoDoRadio2(){
+//     radio[1].classList.add('radio-selecionado');
+//     radio[0].classList.remove('radio-selecionado');
+//     radio[2].classList.remove('radio-selecionado');
+// }
+// radio[2].addEventListener('click', marcarElementoDoRadio3);
+// function marcarElementoDoRadio3(){
+//     radio[2].classList.add('radio-selecionado');
+//     radio[0].classList.remove('radio-selecionado');
+//     radio[1].classList.remove('radio-selecionado');
+// }
 
 //Faz a marcação do checkbox no índice 0
 check[0].addEventListener('click', marcarElementoDoCheckboxIndice0);
