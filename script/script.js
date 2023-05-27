@@ -39,13 +39,12 @@ function mudouTamanho(){
 
 radio.forEach((elemento, index) => {
     elemento.addEventListener('click', () => {
-        marcou(index);
+        marcaRadioButton(index);
     })
     // console.log(elemento, index);
 });
 
-function marcou(indiceClicado){
-    console.log(indiceClicado);
+function marcaRadioButton(indiceClicado){
     radio[indiceClicado].classList.toggle('radio-selecionado');
     if(indiceClicado === 0){
     radio[1].classList.remove('radio-selecionado');
@@ -59,108 +58,73 @@ function marcou(indiceClicado){
     }
 }
 
-// radio[0].addEventListener('click', marcarElementoDoRadio1);
-// function marcarElementoDoRadio1(){
-//     radio[0].classList.add('radio-selecionado');
-//     radio[1].classList.remove('radio-selecionado');
-//     radio[2].classList.remove('radio-selecionado');
-// }
-// radio[1].addEventListener('click', marcarElementoDoRadio2);
-// function marcarElementoDoRadio2(){
-//     radio[1].classList.add('radio-selecionado');
-//     radio[0].classList.remove('radio-selecionado');
-//     radio[2].classList.remove('radio-selecionado');
-// }
-// radio[2].addEventListener('click', marcarElementoDoRadio3);
-// function marcarElementoDoRadio3(){
-//     radio[2].classList.add('radio-selecionado');
-//     radio[0].classList.remove('radio-selecionado');
-//     radio[1].classList.remove('radio-selecionado');
-// }
+check.forEach((elemento, index) => {
+    elemento.addEventListener('click', () => {
+        marcaCheckBox(index);
+    })
+});
 
-//Faz a marcação do checkbox no índice 0
-check[0].addEventListener('click', marcarElementoDoCheckboxIndice0);
-
-function marcarElementoDoCheckboxIndice0(){
-    if(!(check[1].classList.contains('checkbox-selecionado')) && !(check[2].classList.contains('checkbox-selecionado'))){
-        for(let j = 0; j < check.length; j++){
-            check[j].classList.add('checkbox-selecionado');
-            certo[j].style.display = "block";
+function marcaCheckBox(indexSelecionado){
+    let a;
+    let b;
+    if(indexSelecionado === 0){
+        if(!(check[1].classList.contains('checkbox-selecionado')) && !(check[2].classList.contains('checkbox-selecionado'))){
+            for(let j = 0; j < check.length; j++){
+                check[j].classList.add('checkbox-selecionado');
+                certo[j].style.display = "block";
+            }
+            
+        } else if (check[1].classList.contains('checkbox-selecionado') && !(check[2].classList.contains('checkbox-selecionado'))) {
+            for(let j = 0; j < check.length; j++){
+                check[j].classList.remove('checkbox-selecionado');
+                certo[j].style.display = "none";
+                traco.style.display = "none";
+            }
+        } else if (check[2].classList.contains('checkbox-selecionado') && !(check[1].classList.contains('checkbox-selecionado'))){
+            for(let j = 0; j < check.length; j++){
+                check[j].classList.remove('checkbox-selecionado');
+                certo[j].style.display = "none";
+                traco.style.display = "none";
+            }
+        } else  {
+            for(let j = 0; j < check.length; j++){
+                check[j].classList.remove('checkbox-selecionado');
+                certo[j].style.display = "none";
+            }
         }
-        
-    } else if (check[1].classList.contains('checkbox-selecionado') && !(check[2].classList.contains('checkbox-selecionado'))) {
-        for(let j = 0; j < check.length; j++){
-            check[j].classList.remove('checkbox-selecionado');
-            certo[j].style.display = "none";
+    } else {
+        if(indexSelecionado === 1){
+            a = 1;
+            b = 2;
+        } else {
+            a = 2;
+            b = 1;
+        }
+        if(!(check[0].classList.contains('checkbox-selecionado')) && !(check[b].classList.contains('checkbox-selecionado'))){
+            check[a].classList.add('checkbox-selecionado');
+            check[0].classList.add('checkbox-selecionado');
+            certo[a].style.display = "block";
+            traco.style.display = "block";
+                
+        } else if (check[0].classList.contains('checkbox-selecionado') && check[b].classList.contains('checkbox-selecionado')){
+            if(check[a].classList.contains('checkbox-selecionado')){
+                check[a].classList.remove('checkbox-selecionado');
+                certo[a].style.display = 'none';
+                certo[0].style.display = 'none';
+                traco.style.display = 'block'
+            } else {
+                check[a].classList.add('checkbox-selecionado');
+                certo[a].style.display = "block";
+                traco.style.display = 'none';
+                certo[0].style.display = 'block';
+            }
+        } else if ((check[0].classList.contains('checkbox-selecionado') && !(check[b].classList.contains('checkbox-selecionado')))){
+            check[a].classList.remove('checkbox-selecionado');
+            certo[a].style.display = "none";
+            check[0].classList.remove('checkbox-selecionado');
             traco.style.display = "none";
         }
-    } else if (check[2].classList.contains('checkbox-selecionado') && !(check[1].classList.contains('checkbox-selecionado'))){
-        for(let j = 0; j < check.length; j++){
-            check[j].classList.remove('checkbox-selecionado');
-            certo[j].style.display = "none";
-            traco.style.display = "none";
-        }
-    } else  {
-        for(let j = 0; j < check.length; j++){
-            check[j].classList.remove('checkbox-selecionado');
-            certo[j].style.display = "none";
-        }
-    }
-}
-
-check[1].addEventListener('click', marcarElementoDoCheckboxIndice1);
-function marcarElementoDoCheckboxIndice1(){
-    if(!(check[0].classList.contains('checkbox-selecionado')) && !(check[2].classList.contains('checkbox-selecionado'))){
-        check[1].classList.add('checkbox-selecionado');
-        check[0].classList.add('checkbox-selecionado');
-        certo[1].style.display = "block";
-        traco.style.display = "block";
-
-    } else if (check[0].classList.contains('checkbox-selecionado') && check[2].classList.contains('checkbox-selecionado')){
-        if(check[1].classList.contains('checkbox-selecionado')){
-            check[1].classList.remove('checkbox-selecionado');
-            certo[1].style.display = 'none';
-            certo[0].style.display = 'none';
-            traco.style.display = 'block'
-        } else {
-            check[1].classList.add('checkbox-selecionado');
-            certo[1].style.display = "block";
-            traco.style.display = 'none';
-            certo[0].style.display = 'block';
-        }
-    } else if ((check[0].classList.contains('checkbox-selecionado') && !(check[2].classList.contains('checkbox-selecionado')))){
-        check[1].classList.remove('checkbox-selecionado');
-        certo[1].style.display = "none";
-        check[0].classList.remove('checkbox-selecionado');
-        traco.style.display = "none";
-    }
-}
-
-check[2].addEventListener('click', marcarElementoDoCheckboxIndice2);
-function marcarElementoDoCheckboxIndice2(){
-    if(!(check[0].classList.contains('checkbox-selecionado')) && !(check[1].classList.contains('checkbox-selecionado'))){
-        check[2].classList.add('checkbox-selecionado');
-        check[0].classList.add('checkbox-selecionado');
-        certo[2].style.display = "block";
-        traco.style.display = "block";
-
-    } else if (check[0].classList.contains('checkbox-selecionado') && check[1].classList.contains('checkbox-selecionado')){
-        if(check[2].classList.contains('checkbox-selecionado')){
-            check[2].classList.remove('checkbox-selecionado');
-            certo[2].style.display = 'none';
-            certo[0].style.display = 'none';
-            traco.style.display = 'block'
-        } else {
-            check[2].classList.add('checkbox-selecionado');
-            certo[2].style.display = "block";
-            traco.style.display = 'none';
-            certo[0].style.display = 'block';
-        }
-    } else if ((check[0].classList.contains('checkbox-selecionado') && !(check[1].classList.contains('checkbox-selecionado')))){
-        check[2].classList.remove('checkbox-selecionado');
-        certo[2].style.display = "none";
-        check[0].classList.remove('checkbox-selecionado');
-        traco.style.display = "none";
+    
     }
 }
 
@@ -174,13 +138,15 @@ function exibirMenuSelect(){
 }
 
 //Seleciona a opção desejada do select
-for(let j = 0; j < selectItem.length ; j++){
-    selectItem[j].addEventListener('click', selecionaOpcaoDoSelect);
 
-    function selecionaOpcaoDoSelect(){
-        const selecionado = selectItem[j].textContent;
-        textoSelect.innerHTML = selecionado;
-    }
+selectItem.forEach((elemento) => {
+    elemento.addEventListener('click', (evento) => {
+       selecionaOpcaoDoSelect(evento.target.textContent);
+    })
+})
+
+function selecionaOpcaoDoSelect(itemSelecionado){
+    textoSelect.innerHTML = itemSelecionado
 }
 
 //Retira pontos, parenteses e espaços vazios do input de telefone
