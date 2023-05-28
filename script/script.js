@@ -116,7 +116,7 @@ function marcaCheckBox(indexSelecionado){
         } else if (isCheck0Selecionado && !isOutroMeioSelecionado){
             desmarcarCheckbox(meioEscolhido);
             check[0].classList.remove('checkbox-selecionado');
-            traco.style.display = "none";
+            traco.style.display = 'none';
         }
     
     }
@@ -124,8 +124,8 @@ function marcaCheckBox(indexSelecionado){
 function deselecionarTodosCheckboxes(){
     check.forEach((elemento, index) => {
         elemento.classList.remove('checkbox-selecionado');
-        certo[index].style.display = "none";
-        traco.style.display = "none";
+        certo[index].style.display = 'none';
+        traco.style.display = 'none';
     });
 }
 function desmarcarCheckbox(indice){
@@ -192,34 +192,26 @@ function validaTelefone(){
 }
 
 //Possibilita o uso do botão após conferir algumas informações
-function ativaBotao(){
-    if(campos[0].value.length !== 0 && nomeRegEx.test(campos[0].value)){
-        if(campos[1].value.length !== 0 && emailRegEx.test(campos[1].value)){
-            if(mensagemDeErro[2].style.display === 'none'){
-                if(radio[0].classList.contains('radio-selecionado') || radio[1].classList.contains('radio-selecionado') || radio[2].classList.contains('radio-selecionado')){
-                  if(textoSelect.textContent !== '--Escolher opções--'){
-                    if(check[0].classList.contains('checkbox-selecionado')){
-                        if(areaDeTexto.value.length >= 5){
-                            botao.disabled = false;
-                        } else {
-                            botao.disabled = true;
-                        }
-                    } else {
-                       botao.disabled = true;
-                    }
-                } else {
-                   botao.disabled = true;
-                }  
-            }  else {
-               botao.disabled = true;
-            }
-        } else{
-           botao.disabled = true;
-        }
+
+function ativaBotao() {
+    const nome = campos[0].value;
+    const email = campos[1].value;
+    const mensagemErroDisplay = mensagemDeErro[2].style.display;
+    const isRadioSelecionado = radio[0].classList.contains('radio-selecionado') || radio[1].classList.contains('radio-selecionado') || radio[2].classList.contains('radio-selecionado');
+
+    const isSelectEscolhido = textoSelect.textContent !== '--Escolher opções--';
+    const isCheckboxSelecionado = check[0].classList.contains('checkbox-selecionado');
+    const isTextAreaValido = areaDeTexto.value.length >= 5;
+
+    if (nome.length !== 0 && nomeRegEx.test(nome) &&
+        email.length !== 0 && emailRegEx.test(email) &&
+        mensagemErroDisplay === 'none' &&
+        isRadioSelecionado && isSelectEscolhido &&
+        isCheckboxSelecionado && isTextAreaValido) {
+        botao.disabled = false;
     } else {
-       botao.disabled = true;
+        botao.disabled = true;
     }
-}
 }
 
 //Muda os slides
