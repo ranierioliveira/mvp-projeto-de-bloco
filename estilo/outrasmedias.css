@@ -18,7 +18,7 @@
     .principal{
         background-attachment: fixed;
     }
-    .centralizadora{
+    .quem-somos-conteudo{
         justify-content: space-around;
     }
     .quem-somos{
@@ -59,7 +59,7 @@
     .reserva{
         height: 1000px;
     }
-    .fundo-formulario{
+    .conteudo-formulario{
         height: 900px;
     }
     .formulario{
@@ -127,7 +127,7 @@
         width: 120px;
         font-size: 20px;
     }
-    .centralizadora{
+    .quem-somos-conteudo{
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
@@ -188,7 +188,7 @@
     .reserva{
         height: 800px;
     }
-    .fundo-formulario{
+    .conteudo-formulario{
         height: 650px;
     }
     .informacoes-pessoais{

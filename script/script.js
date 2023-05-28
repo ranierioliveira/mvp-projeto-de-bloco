@@ -64,35 +64,26 @@ check.forEach((elemento, index) => {
 });
 
 function marcaCheckBox(indexSelecionado){
-    
     if(indexSelecionado === 0){
-        if(!(check[1].classList.contains('checkbox-selecionado')) && !(check[2].classList.contains('checkbox-selecionado'))){
+        const isCheck1Selecionado = check[1].classList.contains('checkbox-selecionado');
+        const isCheck2Selecionado = check[2].classList.contains('checkbox-selecionado');
+
+        if(!isCheck1Selecionado && !isCheck2Selecionado){
             check.forEach((elemento, index) => {
                 elemento.classList.add('checkbox-selecionado');
                 certo[index].style.display = "block";
             });
-            
-        } else if (check[1].classList.contains('checkbox-selecionado') && !(check[2].classList.contains('checkbox-selecionado'))) {
-            check.forEach((elemento, index) => {
-                elemento.classList.remove('checkbox-selecionado');
-                certo[index].style.display = "none";
-            });
-             traco.style.display = "none";
-        } else if (check[2].classList.contains('checkbox-selecionado') && !(check[1].classList.contains('checkbox-selecionado'))){
-            check.forEach((elemento, index) => {
-                elemento.classList.remove('checkbox-selecionado');
-                certo[index].style.display = "none";
-            });
-             traco.style.display = "none";
+        } else if (isCheck1Selecionado && !isCheck2Selecionado) {
+            deselecionarTodosCheckboxes();
+        } else if (isCheck2Selecionado && !isCheck1Selecionado){
+            deselecionarTodosCheckboxes();
         } else  {
-            check.forEach((elemento, index) => {
-                elemento.classList.remove('checkbox-selecionado');
-                certo[index].style.display = "none";
-            });
+            deselecionarTodosCheckboxes();
         }
     } else {
         let meioEscolhido;
         let outroMeio;
+
         if(indexSelecionado === 1){
             meioEscolhido = 1;
             outroMeio = 2;
@@ -100,16 +91,20 @@ function marcaCheckBox(indexSelecionado){
             meioEscolhido = 2;
             outroMeio = 1;
         }
-        if(!(check[0].classList.contains('checkbox-selecionado')) && !(check[outroMeio].classList.contains('checkbox-selecionado'))){
+
+        const isCheck0Selecionado = check[0].classList.contains('checkbox-selecionado');
+        const isOutroMeioSelecionado = check[outroMeio].classList.contains('checkbox-selecionado');
+
+
+        if(!isCheck0Selecionado && !isOutroMeioSelecionado){
             check[meioEscolhido].classList.add('checkbox-selecionado');
-            check[0].classList.add('checkbox-selecionado');
             certo[meioEscolhido].style.display = "block";
+            check[0].classList.add('checkbox-selecionado');
             traco.style.display = "block";
                 
-        } else if (check[0].classList.contains('checkbox-selecionado') && check[outroMeio].classList.contains('checkbox-selecionado')){
+        } else if (isCheck0Selecionado && isOutroMeioSelecionado){
             if(check[meioEscolhido].classList.contains('checkbox-selecionado')){
-                check[meioEscolhido].classList.remove('checkbox-selecionado');
-                certo[meioEscolhido].style.display = 'none';
+                desmarcarCheckbox(meioEscolhido);
                 certo[0].style.display = 'none';
                 traco.style.display = 'block'
             } else {
@@ -118,14 +113,24 @@ function marcaCheckBox(indexSelecionado){
                 traco.style.display = 'none';
                 certo[0].style.display = 'block';
             }
-        } else if ((check[0].classList.contains('checkbox-selecionado') && !(check[outroMeio].classList.contains('checkbox-selecionado')))){
-            check[meioEscolhido].classList.remove('checkbox-selecionado');
-            certo[meioEscolhido].style.display = "none";
+        } else if (isCheck0Selecionado && !isOutroMeioSelecionado){
+            desmarcarCheckbox(meioEscolhido);
             check[0].classList.remove('checkbox-selecionado');
             traco.style.display = "none";
         }
     
     }
+}
+function deselecionarTodosCheckboxes(){
+    check.forEach((elemento, index) => {
+        elemento.classList.remove('checkbox-selecionado');
+        certo[index].style.display = "none";
+        traco.style.display = "none";
+    });
+}
+function desmarcarCheckbox(indice){
+    check[indice].classList.remove('checkbox-selecionado');
+    certo[indice].style.display = 'none';
 }
 
 //Exibe e oculta as opções do select
