@@ -64,8 +64,7 @@ check.forEach((elemento, index) => {
 });
 
 function marcaCheckBox(indexSelecionado){
-    let a;
-    let b;
+    
     if(indexSelecionado === 0){
         if(!(check[1].classList.contains('checkbox-selecionado')) && !(check[2].classList.contains('checkbox-selecionado'))){
             check.forEach((elemento, index) => {
@@ -92,34 +91,36 @@ function marcaCheckBox(indexSelecionado){
             });
         }
     } else {
+        let meioEscolhido;
+        let outroMeio;
         if(indexSelecionado === 1){
-            a = 1;
-            b = 2;
+            meioEscolhido = 1;
+            outroMeio = 2;
         } else {
-            a = 2;
-            b = 1;
+            meioEscolhido = 2;
+            outroMeio = 1;
         }
-        if(!(check[0].classList.contains('checkbox-selecionado')) && !(check[b].classList.contains('checkbox-selecionado'))){
-            check[a].classList.add('checkbox-selecionado');
+        if(!(check[0].classList.contains('checkbox-selecionado')) && !(check[outroMeio].classList.contains('checkbox-selecionado'))){
+            check[meioEscolhido].classList.add('checkbox-selecionado');
             check[0].classList.add('checkbox-selecionado');
-            certo[a].style.display = "block";
+            certo[meioEscolhido].style.display = "block";
             traco.style.display = "block";
                 
-        } else if (check[0].classList.contains('checkbox-selecionado') && check[b].classList.contains('checkbox-selecionado')){
-            if(check[a].classList.contains('checkbox-selecionado')){
-                check[a].classList.remove('checkbox-selecionado');
-                certo[a].style.display = 'none';
+        } else if (check[0].classList.contains('checkbox-selecionado') && check[outroMeio].classList.contains('checkbox-selecionado')){
+            if(check[meioEscolhido].classList.contains('checkbox-selecionado')){
+                check[meioEscolhido].classList.remove('checkbox-selecionado');
+                certo[meioEscolhido].style.display = 'none';
                 certo[0].style.display = 'none';
                 traco.style.display = 'block'
             } else {
-                check[a].classList.add('checkbox-selecionado');
-                certo[a].style.display = "block";
+                check[meioEscolhido].classList.add('checkbox-selecionado');
+                certo[meioEscolhido].style.display = "block";
                 traco.style.display = 'none';
                 certo[0].style.display = 'block';
             }
-        } else if ((check[0].classList.contains('checkbox-selecionado') && !(check[b].classList.contains('checkbox-selecionado')))){
-            check[a].classList.remove('checkbox-selecionado');
-            certo[a].style.display = "none";
+        } else if ((check[0].classList.contains('checkbox-selecionado') && !(check[outroMeio].classList.contains('checkbox-selecionado')))){
+            check[meioEscolhido].classList.remove('checkbox-selecionado');
+            certo[meioEscolhido].style.display = "none";
             check[0].classList.remove('checkbox-selecionado');
             traco.style.display = "none";
         }
