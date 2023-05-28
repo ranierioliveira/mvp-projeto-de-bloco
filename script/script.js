@@ -18,7 +18,6 @@ const slider = document.querySelectorAll('.slider');
 const botaoVoltar = document.getElementById('botao-voltar');
 const botaoAvancar = document.getElementById('botao-avancar');
 
-
 // Ativa / desativa menu no mobile
 function clicarMenuMobile(){
     if(menu.style.display === 'none'){
@@ -47,8 +46,8 @@ radio.forEach((elemento, index) => {
 function marcaRadioButton(indiceClicado){
     radio[indiceClicado].classList.toggle('radio-selecionado');
     if(indiceClicado === 0){
-    radio[1].classList.remove('radio-selecionado');
-    radio[2].classList.remove('radio-selecionado');
+        radio[1].classList.remove('radio-selecionado');
+        radio[2].classList.remove('radio-selecionado');
     } else if (indiceClicado === 1){
         radio[0].classList.remove('radio-selecionado');
         radio[2].classList.remove('radio-selecionado');
@@ -69,28 +68,28 @@ function marcaCheckBox(indexSelecionado){
     let b;
     if(indexSelecionado === 0){
         if(!(check[1].classList.contains('checkbox-selecionado')) && !(check[2].classList.contains('checkbox-selecionado'))){
-            for(let j = 0; j < check.length; j++){
-                check[j].classList.add('checkbox-selecionado');
-                certo[j].style.display = "block";
-            }
+            check.forEach((elemento, index) => {
+                elemento.classList.add('checkbox-selecionado');
+                certo[index].style.display = "block";
+            });
             
         } else if (check[1].classList.contains('checkbox-selecionado') && !(check[2].classList.contains('checkbox-selecionado'))) {
-            for(let j = 0; j < check.length; j++){
-                check[j].classList.remove('checkbox-selecionado');
-                certo[j].style.display = "none";
-                traco.style.display = "none";
-            }
+            check.forEach((elemento, index) => {
+                elemento.classList.remove('checkbox-selecionado');
+                certo[index].style.display = "none";
+            });
+             traco.style.display = "none";
         } else if (check[2].classList.contains('checkbox-selecionado') && !(check[1].classList.contains('checkbox-selecionado'))){
-            for(let j = 0; j < check.length; j++){
-                check[j].classList.remove('checkbox-selecionado');
-                certo[j].style.display = "none";
-                traco.style.display = "none";
-            }
+            check.forEach((elemento, index) => {
+                elemento.classList.remove('checkbox-selecionado');
+                certo[index].style.display = "none";
+            });
+             traco.style.display = "none";
         } else  {
-            for(let j = 0; j < check.length; j++){
-                check[j].classList.remove('checkbox-selecionado');
-                certo[j].style.display = "none";
-            }
+            check.forEach((elemento, index) => {
+                elemento.classList.remove('checkbox-selecionado');
+                certo[index].style.display = "none";
+            });
         }
     } else {
         if(indexSelecionado === 1){
@@ -138,7 +137,6 @@ function exibirMenuSelect(){
 }
 
 //Seleciona a opção desejada do select
-
 selectItem.forEach((elemento) => {
     elemento.addEventListener('click', (evento) => {
        selecionaOpcaoDoSelect(evento.target.textContent);
