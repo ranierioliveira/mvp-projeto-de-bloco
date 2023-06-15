@@ -150,7 +150,7 @@ selectItem.forEach((elemento) => {
 })
 
 function selecionaOpcaoDoSelect(itemSelecionado){
-    textoSelect.innerHTML = itemSelecionado
+    textoSelect.innerHTML = itemSelecionado;
 }
 
 //Retira pontos, parenteses e espaços vazios do input de telefone
